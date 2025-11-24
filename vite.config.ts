@@ -6,6 +6,10 @@ import { configDefaults } from 'vitest/config';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/soda-lang/',
+  build: {
+    outDir: 'docs',
+  },
   test: {
     globals: true,
     environment: 'node', // or 'jsdom' if needed for DOM-like behavior

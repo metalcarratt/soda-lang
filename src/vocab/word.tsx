@@ -41,6 +41,8 @@ type DropZoneProps = {
 
 const DropZone = ({imagePart, word, corner, dragFrom, doDrop}: DropZoneProps) => {
 
+  const source = imagePart ? `${import.meta.env.BASE_URL}${vocabList[imagePart.word].image}` : undefined;
+
   const allowDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
@@ -64,7 +66,7 @@ const DropZone = ({imagePart, word, corner, dragFrom, doDrop}: DropZoneProps) =>
         ? <img
             onDrop={drop}
             onDragOver={allowDrop}
-            src={imagePart ? vocabList[imagePart.word].image : undefined}
+            src={source}
             className={imagePart ? imageClassForCorner(imagePart.corner) : ''}
             draggable
             onDragStart={drag}
