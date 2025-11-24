@@ -4,11 +4,12 @@ import { imageClassForCorner, type ImagePart } from "./vocab-page";
 type WordProps = {
   word: string;
   imageParts: ImagePart[];
-  dragFrom: (fromImagePart: ImagePart) => void;
-  doWordDrop: (newImagePart: ImagePart, corner: number) => void
+  dragFrom: (fromImagePart: ImagePart, dragItem: ImagePart) => void;
+  doWordDrop: (newImagePart: ImagePart, corner: number) => void;
+  dragItem?: ImagePart
 }
 
-export const Word = ({word, imageParts, dragFrom, doWordDrop}: WordProps) => {
+export const Word = ({word, imageParts, dragFrom, doWordDrop, dragItem}: WordProps) => {
 
   const doDrop = (newImagePart: ImagePart, corner: number) => {
     doWordDrop(newImagePart, corner);
@@ -25,6 +26,7 @@ export const Word = ({word, imageParts, dragFrom, doWordDrop}: WordProps) => {
             word={word}
             corner={corner}
             imagePart={imageParts[corner]}
+            dragItem={dragItem}
           />)}
       </div>
     </div>
@@ -35,33 +37,32 @@ type DropZoneProps = {
   imagePart?: ImagePart;
   word: string;
   corner: number;
-  dragFrom: (fromImagePart: ImagePart) => void;
+  dragFrom: (fromImagePart: ImagePart, newImagePart: ImagePart) => void;
   doDrop: (newImagePart: ImagePart, corner: number) => void;
+  dragItem?: ImagePart
 }
 
-const DropZone = ({imagePart, word, corner, dragFrom, doDrop}: DropZoneProps) => {
+const DropZone = ({imagePart, word, corner, dragFrom, doDrop, dragItem}: DropZoneProps) => {
 
   const source = imagePart ? `${import.meta.env.BASE_URL}${vocabList[imagePart.word].image}` : undefined;
+  const selected = imagePart && dragItem && dragItem.word === imagePart.word && dragItem.corner === imagePart.corner;
 
   const allowDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
 
-  const drop = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    const data = e.dataTransfer.getData('text');
-    const newImagePart = JSON.parse(data) as ImagePart;
-    console.log('Dropped:', newImagePart);
-    doDrop(newImagePart, corner);
+  const drop = () => {
+    // e.preventDefault();
+    console.log('Dropped:', dragItem);
+    dragItem && doDrop(dragItem, corner);
   };
 
-  const drag = (e: React.DragEvent<HTMLImageElement>) => {
-    e.dataTransfer.setData('text', JSON.stringify(imagePart));
-    dragFrom({word, corner});
+  const drag = () => {
+    imagePart && dragFrom({word, corner}, imagePart);
   };
 
   return (
-    <div className="imgWrapper">
+    <div className={`imgWrapper ${selected ? 'selected' : ''}`} onClick={() => dragItem ? drop() : drag()}>
       { imagePart
         ? <img
             onDrop={drop}

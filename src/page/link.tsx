@@ -12,7 +12,7 @@ export const Link = ({ to, children, className, afterFn }: LinkProps) => {
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    navigate(to);
+    navigate(`${import.meta.env.BASE_URL}${to}`);
     afterFn?.();
   };
 

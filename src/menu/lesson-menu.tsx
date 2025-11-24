@@ -5,7 +5,7 @@ export const LessonMenu = () => {
   const {lesson, menu} = useDataContext();
 
   const menuLink = (subpath: string, text: string) => {
-    return <Link to={`/lesson/${lesson?.pathName}/${subpath}`} afterFn={() => menu.setVisible(false)}>{text}</Link>
+    return <Link to={`lesson/${lesson?.pathName}/${subpath}`} afterFn={() => menu.setVisible(false)}>{text}</Link>
   }
 
   return (

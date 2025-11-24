@@ -22,6 +22,7 @@ export const useVocab = (vocab: string[]) => {
 
   const [wordParts, setWordParts] = useState<WordPart[]>([[], [], [], []]);
   const [dragFrom, setDragFrom] = useState<DragFromDetail>('choices');
+  const [dragItem, setDragItem] = useState<ImagePart | undefined>();
 
   const init = () => {
     const _words = shuffle(vocab);
@@ -61,17 +62,21 @@ export const useVocab = (vocab: string[]) => {
     setWordParts(_wordParts);
     setChoices(_choices);
     updateAvailableChoices(_choices);
+    setDragItem(undefined);
   };
 
-  const setDragFromChoices = () => {
+  const setDragFromChoices = (newDragItem: ImagePart) => {
     setDragFrom('choices');
+    setDragItem(newDragItem);
   };
 
   const setDragFromImagePart = (
     fromImagePart: ImagePart,
-    wordIndex: number
+    wordIndex: number,
+    newDragItem: ImagePart
   ) => {
     setDragFrom({ part: fromImagePart, wordIndex });
+    setDragItem(newDragItem);
   };
 
   const startAgain = () => {
@@ -86,6 +91,7 @@ export const useVocab = (vocab: string[]) => {
     wordParts,
     availableChoices,
     startAgain,
+    dragItem,
   };
 };
 

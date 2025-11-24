@@ -27,12 +27,12 @@ export function usePath() {
 
 const parsePath = (path: string) => {
   const segments = path.split('/').filter(Boolean);
-  let page = segments[0];
+  let page = segments[1];
   let lesson;
   let subpage;
   if (page === 'lesson') {
-    lesson = segments[1];
-    subpage = segments[2];
+    lesson = segments[2];
+    subpage = segments[3];
   } else {
     page = 'menu';
   }

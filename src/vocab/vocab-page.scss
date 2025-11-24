@@ -51,6 +51,7 @@
   .choices {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 4px;
     width: 320px;
     flex-wrap: nowrap;
@@ -78,6 +79,12 @@
       height: 120px;
       background-color: #0000;
       border: 1px solid $color-soft;
+    }
+
+    &.selected {
+      border: 4px solid $color-highlight;
+      width: 52px;
+      height: 52px;
     }
 
     img {

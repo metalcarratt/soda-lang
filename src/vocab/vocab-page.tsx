@@ -13,7 +13,7 @@ export const VocabPage = () => {
   const { vocab } = useDataContext();
   if (!vocab) return <></>;
 
-  const { doWordDrop, setDragFromChoices, setDragFromImagePart, availableWords, wordParts, availableChoices, startAgain } = useVocab(vocab);
+  const { doWordDrop, setDragFromChoices, setDragFromImagePart, availableWords, wordParts, availableChoices, startAgain, dragItem } = useVocab(vocab);
 
   return (
     <div className="vocabPage">
@@ -25,19 +25,20 @@ export const VocabPage = () => {
             key={`${wordIndex}${word}`}
             word={word}
             imageParts={wordParts[wordIndex]}
-            dragFrom={(fromImagePart: ImagePart) => setDragFromImagePart(fromImagePart, wordIndex)}
+            dragFrom={(fromImagePart: ImagePart, newDragItem: ImagePart) => setDragFromImagePart(fromImagePart, wordIndex, newDragItem)}
             doWordDrop={(newImagePart: ImagePart, corner: number) => 
               doWordDrop(wordIndex, newImagePart, corner)}
+            dragItem={dragItem}
           />
         )}
         {availableWords.length === 0 && <button onClick={startAgain}>Start again</button>}
       </div>
-      <Choices availableChoices={availableChoices} setDragFromChoices={setDragFromChoices} />
+      <Choices availableChoices={availableChoices} setDragFromChoices={setDragFromChoices} dragItem={dragItem} />
     </div>
   )
 }
 
-const Choices = ({availableChoices, setDragFromChoices}: {availableChoices: ImagePart[], setDragFromChoices: () => void}) => {
+const Choices = ({availableChoices, setDragFromChoices, dragItem}: {availableChoices: ImagePart[], setDragFromChoices: (dragItem: ImagePart) => void, dragItem?: ImagePart}) => {
   // console.log('reload Choices component');
   return (
     <div className="choices">
@@ -46,6 +47,7 @@ const Choices = ({availableChoices, setDragFromChoices}: {availableChoices: Imag
             key={`${choiceIndex}${choice.word}${choice.corner}`}
             imagePart={choice}
             dragFrom={setDragFromChoices}
+            dragItem={dragItem}
           />)}
       </div>
   );

@@ -22,6 +22,6 @@ export const MenuPage = () => {
 
 const LessonLink = ({lesson}: {lesson: LessonType}) => {
   return <li>
-    <Link to={`/lesson/${lesson.pathName}`}>{lesson.name}</Link>
+    <Link to={`lesson/${lesson.pathName}`}>{lesson.name}</Link>
   </li>;
 }
