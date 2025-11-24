@@ -1,0 +1,63 @@
+@use '../theme' as *;
+
+.transcriptPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .transcript {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+
+    font-size: 18px;
+  }
+
+  .transcriptWord {
+    position: relative;
+    display: inline-block;
+    color: $color-bg1;
+    margin: 0 4px;
+
+    &:hover {
+      color: $color-bg1-dark;
+      cursor: pointer;
+      font-size: 20px;
+
+      .tooltip {
+        opacity: 1;
+      }
+    }
+
+    .tooltip {
+      position: absolute;
+      top: 100%;
+      /* bottom: -3em; */
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 0.25em;
+      // background: #ffefad;
+      background-color: $color-highlight;
+      // color: #63634d;
+      color: $color-highlight-dark;
+      padding: 8px 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 10;
+      border: 1px solid $color-highlight-dark;
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .speaker {
+    color: $color-main;
+  }
+}

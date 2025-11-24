@@ -1,0 +1,18 @@
+$color-bubblegum-pink: #ff6fb5;
+$color-soda-blue: #6ec5e9;
+// $color-soda-blue-light: #def3fc;
+$color-candy-violet: #b388eb;
+$color-lime-fizz: #c8f560;
+$color-creamy-peach: #ffe0b5;
+
+$color-main: $color-bubblegum-pink;
+$color-bg1: $color-soda-blue;
+$color-bg1-light: lighten($color-soda-blue, 30%);
+$color-bg1-dark: darken($color-bg1, 30%);
+$color-bg2: $color-candy-violet;
+$color-bg2-dark: darken($color-bg2, 30%);
+$color-highlight: $color-lime-fizz;
+$color-highlight-dark: darken($color-highlight, 40%);
+$color-soft: $color-creamy-peach;
+$color-soft-dark: darken($color-soft, 30%);
+$color-soft-darkest: darken($color-soft, 50%);

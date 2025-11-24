@@ -1,0 +1,134 @@
+@use '../theme' as *;
+
+.vocabPage {
+  h1 {
+    margin: 8px 0;
+  }
+  .words {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: max-content;
+
+    .word {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 150px;
+      // height: 150px;
+      margin-top: 20px;
+
+      position: relative;
+      label {
+        font-size: 38px;
+        position: absolute;
+        z-index: 5;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        font-size: clamp(0.5rem, 5vw, 2rem);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        pointer-events: none;
+
+        color: $color-bg1;
+        text-shadow: 0 0 2px $color-bg2-dark;
+      }
+    }
+
+    .images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      border: 1px solid $color-soft;
+    }
+  }
+
+  .choices {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    width: 320px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow: hidden;
+    margin-top: 16px;
+
+    .imgWrapper {
+      flex: 0 0 auto;
+    }
+  }
+
+  .imgWrapper {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+
+    .loading {
+      background-color: black;
+    }
+
+    .emptyImage {
+      width: 120px;
+      height: 120px;
+      background-color: #0000;
+      border: 1px solid $color-soft;
+    }
+
+    img {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      // width: 60px;
+      // height: 60px;
+
+      &.topLeft {
+        top: -0px;
+        left: -0px;
+        object-fit: cover;
+        object-position: right top;
+        clip-path: inset(0 50% 50% 0);
+      }
+
+      &.topRight {
+        top: -0px;
+        left: -60px;
+        object-fit: cover;
+        object-position: right top;
+        clip-path: inset(0 0 50% 50%);
+      }
+
+      &.bottomLeft {
+        top: -60px;
+        left: -0px;
+        object-fit: cover;
+        object-position: left bottom;
+        clip-path: inset(50% 50% 0 0);
+      }
+
+      &.bottomRight {
+        top: -60px;
+        left: -60px;
+        object-fit: cover;
+        object-position: right bottom;
+        clip-path: inset(50% 0 0 50%);
+      }
+    }
+  }
+
+  button {
+    color: $color-soft-dark;
+    background-color: $color-soft;
+    border: 1px solid $color-main;
+
+    &:hover {
+      color: $color-soft;
+      background-color: $color-soft-dark;
+    }
+  }
+}

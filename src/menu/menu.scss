@@ -1,0 +1,42 @@
+@use '../theme' as *;
+
+.menuHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  width: 10px;
+
+  // padding: 10px 30px 10px 10px;
+  z-index: 20;
+  background-color: $color-bg1-light;
+
+  box-shadow: 8px 0 4px -2px $color-bg1-dark; // rgba(0, 0, 0, 0.3);
+
+  &.visible {
+    width: auto;
+    padding: 10px 30px 10px 10px;
+  }
+
+  .chevron {
+    position: absolute;
+    right: -36px;
+    top: 20px;
+    transform: rotate(-90deg);
+    background-color: $color-bg1-light;
+    padding: 0 8px 4px 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: none;
+    color: $color-bg1-dark;
+
+    box-shadow: 0 8px 4px -2px $color-bg1-dark; //rgba(0, 0, 0, 0.3);
+    z-index: 21;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-bg1;
+    }
+  }
+}
