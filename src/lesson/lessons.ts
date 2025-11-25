@@ -61,6 +61,20 @@ export const interviewLessons: LessonType[] = [
         lines: '아, 진짜?',
       },
     ],
+    vocab: [
+      '반',
+      '1등',
+      '이번',
+      '시험',
+      '어떻다',
+      '꽤',
+      '쉽다',
+      '기본',
+      '알다',
+      '비슷하다',
+      '어렵다',
+      '진짜',
+    ],
   },
   {
     name: 'New hairstyle',
@@ -71,6 +85,18 @@ export const interviewLessons: LessonType[] = [
       { speaker: 'student', lines: '요즘 스타일이야. 나 어때?' },
       { speaker: 'interviewer', lines: '공포 영화 스타일 아니야?' },
       { speaker: 'student', lines: '어… 망했나?' },
+    ],
+    vocab: [
+      '머리카락',
+      '왜',
+      '얼굴',
+      '가리다',
+      '요즘',
+      '스타일',
+      '어떻다',
+      '공포',
+      '영화',
+      '망하다',
     ],
   },
   {
@@ -83,6 +109,21 @@ export const interviewLessons: LessonType[] = [
       { speaker: 'interviewer', lines: '헐, 진짜?' },
       { speaker: 'student', lines: '아니, 그냥 늦잠 잤어.' },
       { speaker: 'interviewer', lines: '어…' },
+    ],
+    vocab: [
+      '그래서',
+      '오늘',
+      '왜',
+      '지각하다',
+      '할머니',
+      '아프다',
+      '병원',
+      '같이',
+      '가다',
+      '진짜',
+      '그냥',
+      '늦잠',
+      '자다',
     ],
   },
 ];
@@ -128,11 +169,49 @@ export const reporterLessons: LessonType[] = [
   },
 ];
 
+export const sockSagaLessons: LessonType[] = [
+  {
+    name: 'Important Announcement',
+    pathName: 'sock-saga-1',
+    video: 'sock-saga-1.mp4',
+  },
+  {
+    name: 'Long socks',
+    pathName: 'sock-saga-2',
+    video: 'sock-saga-2.mp4',
+  },
+  {
+    name: 'Red socks',
+    pathName: 'sock-saga-3',
+    video: 'sock-saga-3.mp4',
+  },
+  {
+    name: 'Stockings?',
+    pathName: 'sock-saga-4',
+    video: 'sock-saga-4.mp4',
+  },
+  {
+    name: 'Pile of socks',
+    pathName: 'sock-saga-5',
+    video: 'sock-saga-5.mp4',
+  },
+  {
+    name: 'Victory',
+    pathName: 'sock-saga-6',
+    video: 'sock-saga-6.mp4',
+  },
+];
+
 export const findByPathName = (pathName: string) => {
-  const lesson = interviewLessons.find((item) => item.pathName === pathName);
+  let lesson = interviewLessons.find((item) => item.pathName === pathName);
   if (lesson) {
     return lesson;
   }
 
-  return reporterLessons.find((item) => item.pathName === pathName);
+  lesson = reporterLessons.find((item) => item.pathName === pathName);
+  if (lesson) {
+    return lesson;
+  }
+
+  return sockSagaLessons.find((item) => item.pathName === pathName);
 };

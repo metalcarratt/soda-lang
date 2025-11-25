@@ -1,4 +1,4 @@
-import { interviewLessons, reporterLessons, type LessonType } from "../lesson/lessons";
+import { interviewLessons, reporterLessons, sockSagaLessons, type LessonType } from "../lesson/lessons";
 import './page.scss';
 import { Link } from "./link";
 
@@ -10,6 +10,10 @@ export const MenuPage = () => {
         <h2>Interview lessons</h2>
         <ol>
           {interviewLessons.map(lesson => <LessonLink lesson={lesson}/>)}
+        </ol>
+        <h2>Sock Saga lessons</h2>
+        <ol>
+          {sockSagaLessons.map(lesson => <LessonLink lesson={lesson}/>)}
         </ol>
         <h2>News report lessons</h2>
         <ol>
