@@ -14,6 +14,13 @@ export const vocabList: Record<string, VocabType> = {
   어떻다: { image: '/words/how.jpg' },
   어렵다: { image: '/words/difficult.jpg' },
   쉽다: { image: '/words/easy.jpg' },
+  왜: { image: '/words/why.jpg' },
+  오늘: { image: '/words/today.jpg' },
+  같이: { image: '/words/together.jpg' },
+  가다: { image: '/words/go.jpg' },
+  자다: { image: '/words/sleep.jpg' },
+  얼굴: { image: '/words/face.jpg' },
+  아프다: { image: '/words/sick.jpg' },
 
   // common in speech
   진짜: { image: '/words/really.jpg' },
@@ -22,36 +29,29 @@ export const vocabList: Record<string, VocabType> = {
   예전: { image: '/words/the-past.jpg' },
   비슷하다: { image: '/words/similar.jpg' },
   기본: { image: '/words/basics.jpg' },
+  그냥: { image: '/words/just.jpg' },
+  그래서: { image: '/words/so.jpg' },
+  요즘: { image: '/words/these-days.jpg' },
+  망하다: { image: '/words/fail.jpg' },
+  스타일: { image: '/words/style.jpg' },
 
   // moderate frequency (school related)
   반: { image: '/words/class.jpg' },
   '1등': { image: '/words/first.jpg' },
+  지각하다: { image: '/words/late.jpg' },
+  늦잠: { image: '/words/oversleep.jpg' },
+  할머니: { image: '/words/grandmother.jpg' },
+  병원: { image: '/words/hospital.jpg' },
 
   // lower frequency
   콜라: { image: '/words/cola.jpg' },
   트림: { image: '/words/burp.jpg' },
   멈추다: { image: '/words/stop.jpg' },
   징그럽다: { image: '/words/gross.jpg' },
-
-  // new
   머리카락: { image: '/words/hair.jpg' },
-  왜: { image: '/words/why.jpg' },
-  얼굴: { image: '/words/face.jpg' },
   가리다: { image: '/words/cover.jpg' },
-  요즘: { image: '/words/these-days.jpg' },
-  스타일: { image: '/words/style.jpg' },
   공포: { image: '/words/horror.jpg' },
   영화: { image: '/words/movie.jpg' },
-  망하다: { image: '/words/fail.jpg' },
-  그래서: { image: '/words/so.jpg' },
-  오늘: { image: '/words/today.jpg' },
-  지각하다: { image: '/words/late.jpg' },
-  할머니: { image: '/words/grandmother.jpg' },
-  아프다: { image: '/words/sick.jpg' },
-  병원: { image: '/words/hospital.jpg' },
-  같이: { image: '/words/together.jpg' },
-  가다: { image: '/words/go.jpg' },
-  그냥: { image: '/words/just.jpg' },
-  늦잠: { image: '/words/oversleep.jpg' },
-  자다: { image: '/words/sleep.jpg' },
+
+  // new
 };

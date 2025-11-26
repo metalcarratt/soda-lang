@@ -174,31 +174,99 @@ export const sockSagaLessons: LessonType[] = [
     name: 'Important Announcement',
     pathName: 'sock-saga-1',
     video: 'sock-saga-1.mp4',
+    transcript: [
+      { speaker: 'reporter', lines: '임돈기 리포팅.' },
+      {
+        speaker: 'reporter',
+        lines: '오늘 교장 선생님께서 큰 발표를 하신다고 합니다.',
+      },
+      { speaker: 'reporter', lines: '과연 무엇일까요?' },
+    ],
   },
   {
     name: 'Long socks',
     pathName: 'sock-saga-2',
     video: 'sock-saga-2.mp4',
+    transcript: [
+      { speaker: 'reporter', lines: '임돈기 입니다.' },
+      {
+        speaker: 'reporter',
+        lines: '방금 교장 선생님이 말씀하셨어요.',
+      },
+      {
+        speaker: 'reporter',
+        lines: '오늘부터 모두 긴 양말을 신어야 한다고 합니다.',
+      },
+      { speaker: 'reporter', lines: '이 새로운 유행, 어떻게 될까요?' },
+    ],
   },
   {
     name: 'Red socks',
     pathName: 'sock-saga-3',
     video: 'sock-saga-3.mp4',
+    transcript: [
+      { speaker: 'reporter', lines: '임돈기 다시 전합니다.' },
+      { speaker: 'reporter', lines: '속보!' },
+      {
+        speaker: 'reporter',
+        lines: '한 학생이 빨간색 긴 양말을 신고 학교에 왔습니다!',
+      },
+      { speaker: 'reporter', lines: '그게 가진 유일한 긴 양말 이라네요.' },
+      {
+        speaker: 'reporter',
+        lines: '앞으로 어떻게 될까요?',
+      },
+    ],
   },
   {
     name: 'Stockings?',
     pathName: 'sock-saga-4',
     video: 'sock-saga-4.mp4',
+    transcript: [
+      { speaker: 'reporter', lines: '임돈기 입니다.' },
+      {
+        speaker: 'reporter',
+        lines: '여학생들이 검은색 스타킹도 양말로 인정되는지 묻고 있습니다.',
+      },
+      {
+        speaker: 'reporter',
+        lines: '선생님들은 당황해서 대답을 못 하고 있네요.',
+      },
+    ],
   },
   {
     name: 'Pile of socks',
     pathName: 'sock-saga-5',
     video: 'sock-saga-5.mp4',
+    transcript: [
+      { speaker: 'reporter', lines: '임돈기 리포팅.' },
+      { speaker: 'reporter', lines: '충격적인 시위!' },
+      {
+        speaker: 'reporter',
+        lines: '오늘 많은 학생들이 아예 양말을 신지 않고 등교했습니다.',
+      },
+      {
+        speaker: 'reporter',
+        lines: '대신 교장실 앞에서 더러운 양말 더미가 발견되었습니다.',
+      },
+    ],
   },
   {
     name: 'Victory',
     pathName: 'sock-saga-6',
     video: 'sock-saga-6.mp4',
+    transcript: [
+      { speaker: 'reporter', lines: '임돈기 속보 전합니다.' },
+      { speaker: 'reporter', lines: '방금 교장 선생님이 발표하셨습니다.' },
+      {
+        speaker: 'reporter',
+        lines: '이제 양말은 길지 않아도 된다고 합니다!',
+      },
+      {
+        speaker: 'reporter',
+        lines: '학생들은 성공적인 승리를 축하하며 환호하고 있습니다.',
+      },
+    ],
   },
 ];
 
