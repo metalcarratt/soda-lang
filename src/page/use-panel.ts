@@ -1,6 +1,11 @@
 import { useState } from 'react';
 
-export type PanelType = 'video' | 'transcript' | 'vocab' | 'menu';
+export type PanelType =
+  | 'video'
+  | 'video-subs'
+  | 'transcript'
+  | 'vocab'
+  | 'menu';
 
 export const usePanel = () => {
   const [panel, setPanel] = useState<PanelType | undefined>();

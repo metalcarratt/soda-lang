@@ -11,6 +11,9 @@ export const Panel = () => {
   if (panel.panel === 'video') {
     return <VideoPage />
   }
+  if (panel.panel === 'video-subs') {
+    return <VideoPage showSubs={true} />
+  }
   if (panel.panel === 'transcript' && lesson) {
     return <Transcript />
   }

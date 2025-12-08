@@ -1,8 +1,10 @@
 import { useRef, useState } from 'react';
+import type { LessonType } from '../lesson/lessons';
 
-export const useVideo = () => {
+export const useVideo = (lesson?: LessonType) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [path, setPath] = useState('');
+  const [subtitle, setSubtitle] = useState<string | undefined>();
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const changeVideo = (newVideo: string) => {
@@ -19,6 +21,20 @@ export const useVideo = () => {
       // console.log('play');
       // video.play();
     }
+  };
+
+  const handleTimeUpdate = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const currentTime = video.currentTime;
+
+    // Find the subtitle with the greatest timing <= currentTime
+    const active = lesson?.transcript
+      ?.filter((s) => s.timing !== undefined && s.timing <= currentTime)
+      .sort((a, b) => b.timing! - a.timing!)[0];
+
+    setSubtitle(active ? active.lines : '');
   };
 
   const videoEnded = () => {
@@ -67,6 +83,8 @@ export const useVideo = () => {
     setSpeed,
     pause,
     play,
+    handleTimeUpdate,
+    subtitle,
   };
 };
 

@@ -17,6 +17,7 @@ export const LessonMenu = () => {
             <li>Watch the {menuLink('video', 'video')}.</li>
             {lesson.transcript && <li>Read the {menuLink('transcript', 'transcript')}.</li>}
             {lesson.vocab && <li>Study the {menuLink('vocab', 'vocab')}.</li>}
+            {lesson.transcript?.[0].timing !== undefined && <li>Watch the {menuLink('video-subs', 'video with subtitles')}.</li>}
           </ol>
         </>}
       </div>

@@ -7,8 +7,8 @@ import { findByPathName } from '../lesson/lessons';
 import { useMenu } from '../menu/use-menu';
 
 export const useData = () => {
-  const video = useVideo();
   const lessons = useLesson();
+  const video = useVideo(lessons.lesson);
   const panel = usePanel();
   const menu = useMenu();
 

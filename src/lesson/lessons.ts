@@ -2,7 +2,7 @@ export type LessonType = {
   name: string;
   pathName: string;
   video: string;
-  transcript?: { speaker: string; lines: string }[];
+  transcript?: { speaker: string; lines: string; timing?: number }[];
   vocab?: string[];
 };
 
@@ -15,15 +15,22 @@ export const interviewLessons: LessonType[] = [
       {
         speaker: 'interviewer',
         lines: '콜라 좋아해?',
+        timing: 0,
       },
       {
         speaker: 'student',
-        lines:
-          '별로. 예전에 너무 많이 마셨는데, 수업 시간에 트림이 멈추질 않았어.',
+        lines: '별로. 예전에 너무 많이 마셨는데,',
+        timing: 3,
+      },
+      {
+        speaker: 'student',
+        lines: '수업 시간에 트림이 멈추질 않았어.',
+        timing: 6,
       },
       {
         speaker: 'interviewer',
         lines: '으엑, 징그러워…',
+        timing: 8,
       },
     ],
     vocab: [
@@ -182,6 +189,14 @@ export const sockSagaLessons: LessonType[] = [
       },
       { speaker: 'reporter', lines: '과연 무엇일까요?' },
     ],
+    vocab: [
+      '오늘', // have
+      '교장',
+      '선생님',
+      '큰',
+      '발표', // announcement
+      '과연', // have
+    ],
   },
   {
     name: 'Long socks',
@@ -198,6 +213,21 @@ export const sockSagaLessons: LessonType[] = [
         lines: '오늘부터 모두 긴 양말을 신어야 한다고 합니다.',
       },
       { speaker: 'reporter', lines: '이 새로운 유행, 어떻게 될까요?' },
+    ],
+    vocab: [
+      '과연',
+      '교장',
+      '선생님',
+      '말씀하다',
+      '모두',
+      '긴',
+      '양말',
+      '신다', // wear
+      '이',
+      '새로운',
+      '유행',
+      '어떻다',
+      '되다',
     ],
   },
   {
@@ -217,6 +247,7 @@ export const sockSagaLessons: LessonType[] = [
         lines: '앞으로 어떻게 될까요?',
       },
     ],
+    vocab: ['다시'],
   },
   {
     name: 'Stockings?',
