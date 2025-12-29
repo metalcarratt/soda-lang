@@ -13,11 +13,6 @@ export type PlaylistType = {
   lessons: string[];
 };
 
-type PlaylistTypeIntermediate = {
-  name: string;
-  lessons: string[];
-};
-
 const playlistRoot = `${import.meta.env.BASE_URL}/playlists`;
 const lessonsRoot = `${import.meta.env.BASE_URL}/lessons`;
 
@@ -26,7 +21,7 @@ const allLessons: Record<string, LessonType> = {};
 const loadPlaylist = async (playlistName: string) => {
   const res = await fetch(`${playlistRoot}/${playlistName}.yml`);
   const text = await res.text();
-  const playlist = yaml.load(text) as PlaylistTypeIntermediate;
+  const playlist = yaml.load(text) as PlaylistType;
   return playlist;
 };
 
@@ -65,10 +60,4 @@ export const allPlaylists = async () => {
 
 export const findByPathName = (pathName: string) => {
   return allLessons[pathName];
-  // for (const playlist of await allPlaylists()) {
-  //   const lesson = playlist.lessons.find((item) => item.pathName === pathName);
-  //   if (lesson) {
-  //     return lesson;
-  //   }
-  // }
 };

@@ -17,7 +17,7 @@
     position: relative;
     display: inline-block;
     color: $color-bg1;
-    margin: 0 4px;
+    // margin: 0 4px;
 
     &:hover {
       color: $color-bg1-dark;
@@ -55,6 +55,10 @@
         padding-left: 20px;
       }
     }
+  }
+
+  .transcriptSpace {
+    margin: 0 4px;
   }
 
   .speaker {

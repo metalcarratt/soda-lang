@@ -17,7 +17,17 @@ export const Transcript = () => {
 }
 
 const TranscriptLine = ({line}: {line: string}) => {
-  const tokens = line.match(/[\p{N}]*[\p{L}]+|[^\p{L}\p{N}\s]+|\s+/gu) || [];
+  // const tokens = line.match(/[\p{N}]*[\p{L}]+|[^\p{L}\p{N}\s]+|\s+/gu) || [];
+  // const tokens = line.match(/[\p{N}]*[\p{L}]+|[^\p{L}\p{N}\s|]+|[\s|]+/gu) || [];
+  // const tokens = (line.match(/[\p{N}]*[\p{L}]+|[^\p{L}\p{N}\s|]+|[\s|]+/gu) || [])
+  //   .filter(t => !/^[\s|]+$/.test(t));
+
+  const tokens = (line.match(/[\p{N}]*[\p{L}]+|[^\p{L}\p{N}\s|]+|[\s]/gu) || [])
+    .filter(t => t !== "|")
+    
+
+
+  console.log('tokens', tokens);
 
 
   return (
@@ -25,6 +35,8 @@ const TranscriptLine = ({line}: {line: string}) => {
       {tokens.map((token, index) =>
         /\p{L}/u.test(token) ? (
           <Word key={index} word={token} />
+        ) : / /.test(token) ? (
+          <span className="transcriptSpace" />
         ) : (
           <span key={index}>{token}</span>
         )

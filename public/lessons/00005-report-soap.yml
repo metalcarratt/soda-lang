@@ -3,19 +3,19 @@ pathName: 5-soap
 video: report-soap.mp4
 transcript:
   - speaker: reporter
-    lines: 속보입니다!
+    lines: 속보|입니다!
 
   - speaker: reporter
-    lines: 방금 전, 남자 화장실에서 비누통이 폭발했습니다!
+    lines: 방금 전, 남자 화장실|에서 비누통|이 폭발|했습니다!
 
   - speaker: reporter
-    lines: 현장은 완전 난장판이에요!
+    lines: 현장|은 완전 난장판|이에요!
 
   - speaker: reporter
-    lines: 목격자들에 따르면, 비누가 벽, 거울, 심지어 천장까지 튀었다고 합니다.
+    lines: 목격자|들|에 따르면, 비누|가 벽, 거울, 심지어 천장|까지 튀었다고 합니다.
 
   - speaker: reporter
-    lines: 선생님들도 어리둥절한 상황이고, 아무도 자백하지 않고 있어요.
+    lines: 선생님|들|도 어리둥절한 상황이고, 아무도 자백하지 않고 있어요.
 
   - speaker: reporter
     lines: 과연, 다음엔 무슨 일이 벌어질까요?
