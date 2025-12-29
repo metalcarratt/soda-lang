@@ -182,12 +182,13 @@ export const sockSagaLessons: LessonType[] = [
     pathName: 'sock-saga-1',
     video: 'sock-saga-1.mp4',
     transcript: [
-      { speaker: 'reporter', lines: '임돈기 리포팅.' },
+      { speaker: 'reporter', lines: '임돈기 리포팅.', timing: 0 },
       {
         speaker: 'reporter',
         lines: '오늘 교장 선생님께서 큰 발표를 하신다고 합니다.',
+        timing: 1,
       },
-      { speaker: 'reporter', lines: '과연 무엇일까요?' },
+      { speaker: 'reporter', lines: '과연 무엇일까요?', timing: 5 },
     ],
     vocab: [
       '오늘', // have
@@ -301,6 +302,91 @@ export const sockSagaLessons: LessonType[] = [
   },
 ];
 
+export const functionLessons: LessonType[] = [
+  {
+    name: 'Hot coffee?',
+    pathName: 'coffee-1',
+    video: 'coffee-1.mp4',
+    transcript: [
+      {
+        speaker: 'interviewer',
+        lines: '커피는 뜨거운 게 더 좋아요? 아니면 아이스가 더 좋아요?',
+        timing: 0,
+      },
+      {
+        speaker: 'interviewee',
+        lines: '저는 뜨거운 게 더 좋아요.',
+        timing: 4,
+      },
+      {
+        speaker: 'interviewee',
+        lines: '아침에 따뜻하면 몸이 진짜 잘 풀려요.',
+        timing: 5,
+      },
+      { speaker: 'interviewer', lines: '그렇죠, 요즘 꽤 춥잖아요.', timing: 8 },
+    ],
+  },
+  {
+    name: 'Ice coffee?',
+    pathName: 'coffee-2',
+    video: 'coffee-2b.mp4',
+    transcript: [
+      {
+        speaker: 'interviewer',
+        lines: '커피는 뜨거운 게 더 좋아요? 아니면 아이스가 더 좋아요?',
+        timing: 0,
+      },
+      {
+        speaker: 'interviewee',
+        lines: '저는 아이스가 더 좋아요.',
+        timing: 3,
+      },
+      {
+        speaker: 'interviewee',
+        lines: '아침에도 시원하면 기분이 진짜 더 좋아져요.',
+        timing: 5,
+      },
+      {
+        speaker: 'interviewer',
+        lines: '그렇죠, 입에서 더 시원하게 느껴지죠.',
+        timing: 7,
+      },
+    ],
+  },
+  {
+    name: 'Cream on your coffee?',
+    pathName: 'coffee-3',
+    video: 'coffee-3.mp4',
+    transcript: [
+      {
+        speaker: 'interviewer',
+        lines: '커피에 크림 넣어서 드세요?',
+        timing: 0,
+      },
+      {
+        speaker: 'interviewee',
+        lines: '아니요, 그건 너무 달아요.',
+        timing: 1,
+      },
+      {
+        speaker: 'interviewee',
+        lines: '저는 그냥 블랙만 마셔요.',
+        timing: 3,
+      },
+      {
+        speaker: 'interviewer',
+        lines: '에이, 그건 너무 쓰잖아요.',
+        timing: 4,
+      },
+      {
+        speaker: 'interviewer',
+        lines: '저는 달콤한 거 없으면 못 살아요!',
+        timing: 7,
+      },
+    ],
+  },
+];
+
 export const findByPathName = (pathName: string) => {
   let lesson = interviewLessons.find((item) => item.pathName === pathName);
   if (lesson) {
@@ -312,5 +398,10 @@ export const findByPathName = (pathName: string) => {
     return lesson;
   }
 
-  return sockSagaLessons.find((item) => item.pathName === pathName);
+  lesson = sockSagaLessons.find((item) => item.pathName === pathName);
+  if (lesson) {
+    return lesson;
+  }
+
+  return functionLessons.find((item) => item.pathName === pathName);
 };
