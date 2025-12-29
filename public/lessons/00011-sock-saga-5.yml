@@ -1,0 +1,15 @@
+name: 'Pile of socks'
+pathName: 'sock-saga-5'
+video: 'sock-saga-5.mp4'
+transcript:
+  - speaker: 'reporter'
+    lines: '임돈기 리포팅.'
+
+  - speaker: 'reporter'
+    lines: '충격적인 시위!'
+
+  - speaker: 'reporter'
+    lines: '오늘 많은 학생들이 아예 양말을 신지 않고 등교했습니다.'
+
+  - speaker: 'reporter'
+    lines: '대신 교장실 앞에서 더러운 양말 더미가 발견되었습니다.'

@@ -1,0 +1,12 @@
+name: 'Stockings?'
+pathName: 'sock-saga-4'
+video: 'sock-saga-4.mp4'
+transcript:
+  - speaker: 'reporter'
+    lines: '임돈기 입니다.'
+
+  - speaker: 'reporter'
+    lines: '여학생들이 검은색 스타킹도 양말로 인정되는지 묻고 있습니다.'
+
+  - speaker: 'reporter'
+    lines: '선생님들은 당황해서 대답을 못 하고 있네요.'

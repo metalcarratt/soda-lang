@@ -1,0 +1,23 @@
+name: Cream on your coffee?
+pathName: coffee-3
+video: coffee-3.mp4
+transcript:
+  - speaker: interviewer
+    lines: 커피에 크림 넣어서 드세요?
+    timing: 0
+
+  - speaker: interviewee
+    lines: 아니요, 그건 너무 달아요.
+    timing: 1
+
+  - speaker: interviewee
+    lines: 저는 그냥 블랙만 마셔요.
+    timing: 3
+
+  - speaker: interviewer
+    lines: 에이, 그건 너무 쓰잖아요.
+    timing: 4
+
+  - speaker: interviewer
+    lines: 저는 달콤한 거 없으면 못 살아요!
+    timing: 7

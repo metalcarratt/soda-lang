@@ -1,0 +1,27 @@
+name: New hairstyle
+pathName: 3-hair
+video: interview-hair.mp4
+transcript:
+  - speaker: interviewer
+    lines: 머리카락이 왜 얼굴을 다 가려?
+
+  - speaker: student
+    lines: 요즘 스타일이야. 나 어때?
+
+  - speaker: interviewer
+    lines: 공포 영화 스타일 아니야?
+
+  - speaker: student
+    lines: 어… 망했나?
+
+vocab:
+  - 머리카락
+  - 왜
+  - 얼굴
+  - 가리다
+  - 요즘
+  - 스타일
+  - 어떻다
+  - 공포
+  - 영화
+  - 망하다

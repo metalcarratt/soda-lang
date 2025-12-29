@@ -1,0 +1,19 @@
+name: Hot coffee?
+pathName: coffee-1
+video: coffee-1.mp4
+transcript:
+  - speaker: interviewer
+    lines: 커피는 뜨거운 게 더 좋아요? 아니면 아이스가 더 좋아요?
+    timing: 0
+
+  - speaker: interviewee
+    lines: 저는 뜨거운 게 더 좋아요.
+    timing: 4
+
+  - speaker: interviewee
+    lines: 아침에 따뜻하면 몸이 진짜 잘 풀려요.
+    timing: 5
+
+  - speaker: interviewer
+    lines: 그렇죠, 요즘 꽤 춥잖아요.
+    timing: 8

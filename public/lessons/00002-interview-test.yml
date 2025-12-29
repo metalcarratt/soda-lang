@@ -1,0 +1,29 @@
+name: How was the test?
+pathName: 2-test
+video: interview-test.mp4
+transcript:
+  - speaker: interviewer
+    lines: 반에서 1등인데, 이번 시험 어땠어?
+
+  - speaker: student
+    lines: 음… 꽤 쉬웠던 것 같아. 기본만 알면 다 비슷비슷하잖아.
+
+  - speaker: interviewer
+    lines: 난 어렵던데…
+
+  - speaker: student
+    lines: 아, 진짜?
+
+vocab:
+  - 반
+  - 1등
+  - 이번
+  - 시험
+  - 어떻다
+  - 꽤
+  - 쉽다
+  - 기본
+  - 알다
+  - 비슷하다
+  - 어렵다
+  - 진짜

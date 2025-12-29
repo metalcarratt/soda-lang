@@ -1,29 +1,27 @@
-import { functionLessons, interviewLessons, reporterLessons, sockSagaLessons, type LessonType } from "../lesson/lessons";
+import { allPlaylists, findByPathName, type LessonType, type PlaylistType } from "../lesson/lessons";
 import './page.scss';
 import { Link } from "./link";
+import { useEffect, useState } from "react";
 
 export const MenuPage = () => {
+  const [playlists, setPlaylists] = useState<PlaylistType[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      setPlaylists(await allPlaylists());
+    })();
+  }, []);
+
   return (
     <div className="page">
       <div>
         <h1>Lessons</h1>
-        <h2>Interview lessons</h2>
-        <ol>
-          {interviewLessons.map(lesson => <LessonLink lesson={lesson}/>)}
-        </ol>
-        <h2>Sock Saga lessons</h2>
-        <ol>
-          {sockSagaLessons.map(lesson => <LessonLink lesson={lesson}/>)}
-        </ol>
-        <h2>News report lessons</h2>
-        <ol>
-          {reporterLessons.map(lesson => <LessonLink lesson={lesson}/>)}
-        </ol>
-
-        <h2>Function lessons</h2>
-        <ol>
-          {functionLessons.map(lesson => <LessonLink lesson={lesson}/>)}
-        </ol>
+        {playlists.map(playlist => <>
+          <h2>{playlist.name}</h2>
+          <ol>
+            {playlist.lessons.map(lesson => <LessonLink lesson={findByPathName(lesson)}/>)}
+          </ol>
+        </>)}
       </div>
     </div>
   );

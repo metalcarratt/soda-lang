@@ -1,0 +1,32 @@
+name: Why are you late?
+pathName: 4-late
+video: interview-late.mp4
+transcript:
+  - speaker: interviewer
+    lines: 그래서, 오늘 왜 지각했어
+
+  - speaker: student
+    lines: 할머니가 아프셔서 병원에 같이 갔거든.
+
+  - speaker: interviewer
+    lines: 헐, 진짜?
+
+  - speaker: student
+    lines: 아니, 그냥 늦잠 잤어.
+
+  - speaker: interviewer
+    lines: 어…
+vocab:
+  - 그래서
+  - 오늘
+  - 왜
+  - 지각하다
+  - 할머니
+  - 아프다
+  - 병원
+  - 같이
+  - 가다
+  - 진짜
+  - 그냥
+  - 늦잠
+  - 자다

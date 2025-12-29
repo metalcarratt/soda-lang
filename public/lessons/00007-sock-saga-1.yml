@@ -1,0 +1,23 @@
+name: Important Announcement
+pathName: sock-saga-1
+video: sock-saga-1.mp4
+transcript:
+  - speaker: reporter
+    lines: 임돈기 리포팅.
+    timing: 0
+
+  - speaker: reporter
+    lines: 오늘 교장 선생님께서 큰 발표를 하신다고 합니다.
+    timing: 1
+
+  - speaker: reporter
+    lines: 과연 무엇일까요?
+    timing: 5
+
+vocab:
+  - 오늘
+  - 교장
+  - 선생님
+  - 큰
+  - 발표
+  - 과연

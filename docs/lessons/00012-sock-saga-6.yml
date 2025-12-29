@@ -1,0 +1,15 @@
+name: 'Victory'
+pathName: 'sock-saga-6'
+video: 'sock-saga-6.mp4'
+transcript:
+  - speaker: 'reporter'
+    lines: '임돈기 속보 전합니다.'
+
+  - speaker: 'reporter'
+    lines: '방금 교장 선생님이 발표하셨습니다.'
+
+  - speaker: 'reporter'
+    lines: '이제 양말은 길지 않아도 된다고 합니다!'
+
+  - speaker: 'reporter'
+    lines: '학생들은 성공적인 승리를 축하하며 환호하고 있습니다.'

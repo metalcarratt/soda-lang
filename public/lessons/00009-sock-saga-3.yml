@@ -1,0 +1,20 @@
+name: Red socks
+pathName: sock-saga-3
+video: sock-saga-3.mp4
+transcript:
+  - speaker: reporter
+    lines: 임돈기 다시 전합니다.
+  - speaker: reporter
+    lines: 속보!
+
+  - speaker: reporter
+    lines: 한 학생이 빨간색 긴 양말을 신고 학교에 왔습니다!
+
+  - speaker: reporter
+    lines: 그게 가진 유일한 긴 양말 이라네요.
+
+  - speaker: reporter
+    lines: 앞으로 어떻게 될까요?
+
+vocab:
+  - 다시

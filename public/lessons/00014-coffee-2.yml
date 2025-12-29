@@ -1,0 +1,19 @@
+name: Ice coffee?
+pathName: coffee-2
+video: coffee-2b.mp4
+transcript:
+  - speaker: interviewer
+    lines: 커피는 뜨거운 게 더 좋아요? 아니면 아이스가 더 좋아요?
+    timing: 0
+
+  - speaker: interviewee
+    lines: 저는 아이스가 더 좋아요.
+    timing: 3
+
+  - speaker: interviewee
+    lines: 아침에도 시원하면 기분이 진짜 더 좋아져요.
+    timing: 5
+
+  - speaker: interviewer
+    lines: 그렇죠, 입에서 더 시원하게 느껴지죠.
+    timing: 7

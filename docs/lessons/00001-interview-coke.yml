@@ -1,0 +1,31 @@
+name: Do you like Coke?
+pathName: 1-coke
+video: interview-coke.mp4
+transcript:
+  - speaker: interviewer
+    lines: 콜라 좋아해?
+    timing: 0
+
+  - speaker: student
+    lines: 별로. 예전에 너무 많이 마셨는데
+    timing: 3
+
+  - speaker: student
+    lines: 수업 시간에 트림이 멈추질 않았어.
+    timing: 6
+
+  - speaker: interviewer
+    lines: 으엑, 징그러워…
+    timing: 8
+
+vocab:
+  - 콜라
+  - 수업
+  - 시간
+  - 트림
+  - 멈추다
+  - 징그럽다
+  - 좋아하다
+  - 마시다
+  - 별로
+  - 예전
