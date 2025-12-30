@@ -5,12 +5,14 @@ import { useVideo } from '../video/use-video';
 import { usePath } from '../page/use-path';
 import { findByPathName } from '../lesson/lessons';
 import { useMenu } from '../menu/use-menu';
+import { useWords } from '../words/use-words';
 
 export const useData = () => {
   const lessons = useLesson();
   const video = useVideo(lessons.lesson);
   const panel = usePanel();
   const menu = useMenu();
+  const words = useWords();
 
   const { path, pathParts } = usePath();
 
@@ -39,6 +41,7 @@ export const useData = () => {
     vocab: lessons.lesson?.vocab,
     panel,
     menu,
+    words,
   };
 };
 

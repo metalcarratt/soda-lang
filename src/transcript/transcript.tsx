@@ -1,6 +1,8 @@
 import './transcript.scss';
-import { wordList } from "../lesson/word-list";
+import { wordList, type WordType } from "../lesson/word-list";
 import { useDataContext } from '../data/use-data-context';
+import { useData } from '../data/use-data';
+import type { UseWordsType } from '../words/use-words';
 
 export const Transcript = () => {
   const {lesson} = useDataContext();
@@ -27,7 +29,7 @@ const TranscriptLine = ({line}: {line: string}) => {
     
 
 
-  console.log('tokens', tokens);
+  // console.log('tokens', tokens);
 
 
   return (
@@ -46,7 +48,8 @@ const TranscriptLine = ({line}: {line: string}) => {
 }
 
 const Word = ({ word }: {word: string}) => {
-  const w = wordList[word];
+  const { words } = useData();
+  const w = findWord(word, words);
   return <span className="transcriptWord">
     {word}
     <span className="tooltip">
@@ -57,4 +60,55 @@ const Word = ({ word }: {word: string}) => {
       {w?.note && <p><b>Note:</b> {w?.note}</p>}
     </span>
   </span>
+}
+
+const findWord = (searchWord: string, words: UseWordsType) => {
+  const w = wordList[searchWord];
+  if (w) {
+    if (w.word) {
+      if (w.participles) {
+        return findParticipleWord(w.word, w.participles, words);
+      }
+      return findVocabWord(w.word, words);
+    }
+     return w;
+  }
+
+  return findVocabWord(searchWord, words);
+}
+
+const findVocabWord = (searchWord: string, words: UseWordsType): WordType | undefined => {
+  const v = words.findWord(searchWord);
+  
+  if (v) {
+    return {
+      en: v.meaning
+    };
+  }
+  return undefined;
+}
+
+const findParticipleWord = (searchWord: string, searchParticiples: string[], words: UseWordsType): WordType | undefined => {
+  let en = '';
+  const breakdown: [string, string][] = [];
+  
+  const v = words.findWord(searchWord);
+  
+  if (v) {
+    breakdown.push([v.word, v.meaning]);
+    en = v.meaning;
+
+    for (const participle of searchParticiples) {
+      const p = words.findParticiple(participle);
+      if (p) {
+        breakdown.push([p.word, p.meaning]);
+      }
+    }
+  }
+
+
+  return {
+      en,
+      breakdown
+    };
 }

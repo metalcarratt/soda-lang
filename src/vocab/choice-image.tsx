@@ -1,9 +1,11 @@
-import { vocabList } from "../lesson/vocab-list";
+import { useData } from "../data/use-data";
 import { imageClassForCorner, type ImagePart } from "./vocab-page";
 
 export const ChoiceImage = ({imagePart, dragFrom, dragItem}: {imagePart: ImagePart, dragFrom: (dragItem: ImagePart) => void, dragItem?: ImagePart}) => {
 
-  const source = `${import.meta.env.BASE_URL}${vocabList[imagePart.word].image}`;
+  const { words } = useData();
+  const word = imagePart ? words.findWord(imagePart.word) : undefined;
+  const source = word ? `${import.meta.env.BASE_URL}${word.image}` : undefined;
 
   const selected = dragItem?.word === imagePart.word && dragItem?.corner === imagePart.corner;
 

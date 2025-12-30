@@ -1,4 +1,4 @@
-import { vocabList } from "../lesson/vocab-list";
+import { useData } from "../data/use-data";
 import { imageClassForCorner, type ImagePart } from "./vocab-page";
 
 type WordProps = {
@@ -44,7 +44,10 @@ type DropZoneProps = {
 
 const DropZone = ({imagePart, word, corner, dragFrom, doDrop, dragItem}: DropZoneProps) => {
 
-  const source = imagePart ? `${import.meta.env.BASE_URL}${vocabList[imagePart.word].image}` : undefined;
+  const { words } = useData();
+  const targetWord = imagePart ? words.findWord(imagePart.word) : undefined;
+
+  const source = imagePart && targetWord ? `${import.meta.env.BASE_URL}${targetWord.image}` : undefined;
   const selected = imagePart && dragItem && dragItem.word === imagePart.word && dragItem.corner === imagePart.corner;
 
   const allowDrop = (e: React.DragEvent<HTMLDivElement>) => {

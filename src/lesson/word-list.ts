@@ -1,24 +1,28 @@
-type WordType = {
-  en: string;
+export type WordType = {
+  en?: string;
+  word?: string;
+  participles?: string[];
   breakdown?: [string, string][];
   note?: string;
 };
 
 export const wordList: Record<string, WordType> = {
-  콜라: { en: 'Cola' },
-  좋아해: { en: 'like' },
-  별로: { en: 'not really' },
-  예전에: { en: 'in the past' },
-  너무: { en: 'too' },
-  많이: { en: 'many/much' },
-  마셨는데: { en: 'when drink' },
-  수업: { en: 'class' },
-  시간에: { en: 'time' },
-  트림이: { en: 'burp' },
-  멈추질: { en: 'stop' },
-  않았어: { en: 'did not' },
-  으엑: { en: 'eww' },
-  징그러워: { en: 'gross' },
+  // 콜라: { en: 'Cola' },
+  좋아해: { word: '좋아하다' },
+  // 별로: { en: 'not really' },
+  예전에: { word: '예전', participles: ['에'] },
+  // 너무: { en: 'too' },
+  // 많이: { en: 'many/much' },
+  마셨는데: { word: '마시다', participles: ['었', '는데'] },
+  // 마셨는데: { en: 'when I drink' },
+  // 수업: { en: 'class' },
+  시간에: { word: '시간', participles: ['에'] },
+  트림이: { word: '트림', participles: ['이'] },
+  멈추질: { word: '멈추다', participles: ['지'] },
+  않았어: { word: '않다', participles: ['았'] },
+  // 으엑: { en: 'eww' },
+  징그러워: { word: '징그럽다' },
+
   반에서: {
     en: 'in the class',
     breakdown: [
@@ -34,13 +38,12 @@ export const wordList: Record<string, WordType> = {
       ['ㄴ데', 'since'],
     ],
   },
-  이번: { en: 'this time' },
-  시험: { en: 'exam' },
+  // 이번: { en: 'this time' },
+  // 시험: { en: 'exam' },
   어땠어: { en: 'how was' },
   음: { en: 'um' },
-  꽤: { en: 'quite' },
+  // 꽤: { en: 'quite' },
   쉬웠던: { en: 'was easy' },
-  것: { en: 'thing' },
   같아: { en: 'seems / I think' },
   기본만: {
     en: 'just the basics',
@@ -75,7 +78,7 @@ export const wordList: Record<string, WordType> = {
     ],
   },
   아: { en: 'ah' },
-  진짜: { en: 'really' },
+  // 진짜: { en: 'really' },
   머리카락이: {
     en: 'hair',
     breakdown: [
@@ -83,10 +86,10 @@ export const wordList: Record<string, WordType> = {
       ['카락', 'hair'],
     ],
   },
-  왜: { en: 'why' },
+  // 왜: { en: 'why' },
   얼굴을: { en: 'face' },
   가려: { en: 'cover/hide' },
-  요즘: { en: 'these days' },
+  // 요즘: { en: 'these days' },
   스타일이야: {
     en: 'is style',
     breakdown: [
@@ -96,9 +99,9 @@ export const wordList: Record<string, WordType> = {
   },
   나: { en: 'I' },
   어때: { en: 'how is it' },
-  공포: { en: 'horror' },
-  영화: { en: 'movie' },
-  스타일: { en: 'style' },
+  // 공포: { en: 'horror' },
+  // 영화: { en: 'movie' },
+  // 스타일: { en: 'style' },
   아니야: { en: 'is it not?' },
   어: { en: 'oh' },
   망했나: {
@@ -109,8 +112,8 @@ export const wordList: Record<string, WordType> = {
       ['나', '(question)'],
     ],
   },
-  그래서: { en: 'so' },
-  오늘: { en: 'today' },
+  // 그래서: { en: 'so' },
+  // 오늘: { en: 'today' },
   지각했어: { en: 'was late' },
   할머니가: { en: 'grandmother' },
   아프셔서: {
@@ -128,7 +131,7 @@ export const wordList: Record<string, WordType> = {
       ['에', 'to'],
     ],
   },
-  같이: { en: 'together' },
+  // 같이: { en: 'together' },
   갔거든: {
     en: 'went',
     breakdown: [
@@ -139,14 +142,14 @@ export const wordList: Record<string, WordType> = {
   },
   헐: { en: 'whoa' },
   아니: { en: 'not really' },
-  그냥: { en: 'just' },
-  늦잠: {
-    en: 'oversleep',
-    breakdown: [
-      ['늦', 'late'],
-      ['잠', 'sleep'],
-    ],
-  },
+  // 그냥: { en: 'just' },
+  // 늦잠: {
+  //   en: 'oversleep',
+  //   breakdown: [
+  //     ['늦', 'late'],
+  //     ['잠', 'sleep'],
+  //   ],
+  // },
   잤어: {
     en: 'slept',
     breakdown: [
@@ -367,4 +370,38 @@ export const wordList: Record<string, WordType> = {
   승리를: { en: 'victory' },
   축하하며: { en: 'congratulate and' },
   환호하고: { en: 'cheer' },
+
+  커피는: { word: '커피' },
+  뜨거운: { word: '뜨거다' },
+  게: { word: '것' },
+  좋아요: { word: '좋아하다' },
+  아이스가: { word: '아이스' },
+  저는: { word: '저' },
+  아침에: { word: '아침' },
+  따뜻하면: { word: '따뜻하다', participles: ['면'] },
+  몸이: { word: '몸' },
+  풀려요: { word: '풀리다' },
+  춥잖아요: { word: '춥다', participles: ['잖아'] },
+
+  아침에도: { word: '아침', participles: ['에도'] },
+  시원하면: { word: '시원하다', participles: ['면'] },
+  기분이: { word: '기분' },
+  좋아져요: { word: '좋아하다' },
+  입에서: { word: '입', participles: ['에서'] },
+  시원하게: { word: '시원하다' },
+  느껴지죠: { word: '느끼다' },
+
+  커피에: { word: '커피' },
+  크림: { word: '크림' },
+  넣어서: { word: '넣다', participles: ['어서'] },
+  드세요: { word: '드시다' },
+  아니요: { word: '아니다' },
+  달아요: { word: '달다' },
+  블랙만: { word: '블랙', participles: ['만'] },
+  마셔요: { word: '마시다' },
+  쓰잖아요: { word: '쓰다', participles: ['잖아'] },
+  달콤한: { word: '달콤하다' },
+  거: { word: '것' },
+  없으면: { word: '없다', participles: ['면'] },
+  살아요: { word: '살다' },
 };

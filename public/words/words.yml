@@ -1,0 +1,279 @@
+# very high frequency
+
+- word: 시간
+  meaning: time
+  image: time.jpg
+
+- word: 수업
+  meaning: class (a subject)
+  image: class-subject.jpg
+
+- word: 알다
+  meaning: know
+  image: know.jpg
+
+- word: 좋아하다
+  meaning: like
+  image: like.jpg
+
+- word: 마시다
+  meaning: drink
+  image: drinking.jpg
+
+- word: 이번
+  meaning: this time
+  image: this-time.jpg
+
+- word: 시험
+  meaning: exam
+  image: exam.jpg
+
+- word: 어떻다
+  meaning: how?
+  image: how.jpg
+
+- word: 어렵다
+  meaning: is difficult
+  image: difficult.jpg
+
+- word: 쉽다
+  meaning: is easy
+  image: easy.jpg
+
+- word: 왜
+  meaning: why
+  image: why.jpg
+
+- word: 오늘
+  meaning: today
+  image: today.jpg
+
+- word: 같이
+  meaning: together
+  image: together.jpg
+
+- word: 가다
+  meaning: go
+  image: go.jpg
+
+- word: 자다
+  meaning: sleep
+  image: sleep.jpg
+
+- word: 얼굴
+  meaning: face
+  image: face.jpg
+
+- word: 아프다
+  meaning: am sick
+  image: sick.jpg
+
+  # common in speech
+
+- word: 진짜
+  meaning: really
+  image: really.jpg
+
+- word: 별로
+  meaning: not really
+  image: not-really.jpg
+
+- word: 꽤
+  meaning: quite
+  image: quite.jpg
+
+- word: 예전
+  meaning: the past
+  image: the-past.jpg
+
+- word: 비슷하다
+  meaning: similar
+  image: similar.jpg
+
+- word: 기본
+  meaning: basics
+  image: basics.jpg
+
+- word: 그냥
+  meaning: just
+  image: just.jpg
+
+- word: 그래서
+  meaning: so
+  image: so.jpg
+
+- word: 요즘
+  meaning: these days
+  image: these-days.jpg
+
+- word: 망하다
+  meaning: fail
+  image: fail.jpg
+
+- word: 스타일
+  meaning: style
+  image: style.jpg
+
+# moderate frequency (school related)
+
+- word: 반
+  meaning: class (group of students)
+  image: class.jpg
+
+- word: 1등
+  meaning: first
+  image: first.jpg
+
+- word: 지각하다
+  meaning: am late
+  image: late.jpg
+
+- word: 늦잠
+  meaning: oversleep
+  image: oversleep.jpg
+
+- word: 할머니
+  meaning: grandmother
+  image: grandmother.jpg
+
+- word: 병원
+  meaning: hospital
+  image: hospital.jpg
+
+# lower frequency
+
+- word: 콜라
+  meaning: cola
+  image: cola.jpg
+
+- word: 트림
+  meaning: burp
+  image: burp.jpg
+
+- word: 멈추다
+  meaning: stop
+  image: stop.jpg
+
+- word: 징그럽다
+  meaning: is gross
+  image: is gross.jpg
+
+- word: 머리카락
+  meaning: hair
+  image: hair.jpg
+
+- word: 가리다
+  meaning: cover
+  image: cover.jpg
+
+- word: 공포
+  meaning: horror
+  image: horror.jpg
+
+- word: 영화
+  meaning: movie
+  image: movie.jpg
+
+# other words
+
+- word: 너무
+  meaning: too
+
+- word: 많이
+  meaning: many
+
+- word: 으엑
+  meaning: eww
+
+- word: 않다
+  meaning: not do
+
+- word: 커피
+  meaning: coffee
+
+- word: 뜨거다
+  meaning: hot
+
+- word: 것
+  meaning: thing
+
+- word: 더
+  meaning: more
+
+- word: 아니면
+  meaning: otherwise
+
+- word: 아이스
+  meaning: iced drink
+
+- word: 저
+  meaning: I
+
+- word: 아침
+  meaning: morning
+
+- word: 따뜻하다
+  meaning: is hot
+
+- word: 몸
+  meaning: body
+
+- word: 잘
+  meaning: well
+
+- word: 풀리다
+  meaning: relax
+
+- word: 그렇죠
+  meaning: that's right
+
+- word: 춥다
+  meaning: is cold
+
+- word: 시원하다
+  meaning: is cool
+
+- word: 기분
+  meaning: feeling
+
+- word: 입
+  meaning: mouth
+
+- word: 느끼다
+  meaning: feel
+
+- word: 크림
+  meaning: cream
+
+- word: 넣다
+  meaning: put
+
+- word: 드시다
+  meaning: eat (formal)
+
+- word: 아니다
+  meaning: is not
+
+- word: 그건
+  meaning: that thing
+
+- word: 달다
+  meaning: is sweet
+
+- word: 블랙
+  meaning: black
+
+- word: 에이
+  meaning: aye
+
+- word: 쓰다
+  meaning: is bitter
+
+- word: 달콤하다
+  meaning: is sweet
+
+- word: 없다
+  meaning: not have
+
+- word: 살다
+  meaning: live
