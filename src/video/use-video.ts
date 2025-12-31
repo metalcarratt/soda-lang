@@ -34,7 +34,9 @@ export const useVideo = (lesson?: LessonType) => {
       ?.filter((s) => s.timing !== undefined && s.timing <= currentTime)
       .sort((a, b) => b.timing! - a.timing!)[0];
 
-    setSubtitle(active ? active.lines : '');
+    setSubtitle(
+      active ? active.lines.replace(/(?<=\p{L})[.:](?=\p{L})/gu, '') : ''
+    );
   };
 
   const videoEnded = () => {

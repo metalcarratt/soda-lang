@@ -24,7 +24,11 @@ const TranscriptLine = ({line}: {line: string}) => {
   // const tokens = (line.match(/[\p{N}]*[\p{L}]+|[^\p{L}\p{N}\s|]+|[\s|]+/gu) || [])
   //   .filter(t => !/^[\s|]+$/.test(t));
 
-  const tokens = (line.match(/[\p{N}]*[\p{L}]+|[^\p{L}\p{N}\s|]+|[\s]/gu) || [])
+  // const tokens = (line.match(/[\p{N}]*[\p{L}]+|[^\p{L}\p{N}\s|]+|[\s]/gu) || [])
+  //   .filter(t => t !== "|")
+
+  const tokens = (line.match(/[\p{L}\p{N}]+(?:[.:][\p{L}\p{N}]+)*|[^\p{L}\p{N}\s]|\s+/gu
+) || [])
     .filter(t => t !== "|")
     
 
@@ -50,8 +54,9 @@ const TranscriptLine = ({line}: {line: string}) => {
 const Word = ({ word }: {word: string}) => {
   const { words } = useData();
   const w = findWord(word, words);
+  const displayWord = word.length > 1 ? word.replaceAll('.', '').replaceAll(':', '') : word;
   return <span className="transcriptWord">
-    {word}
+    {displayWord}
     <span className="tooltip">
       {w?.en ?? 'Unknown'}
       {w?.breakdown && <ul>
@@ -63,6 +68,16 @@ const Word = ({ word }: {word: string}) => {
 }
 
 const findWord = (searchWord: string, words: UseWordsType) => {
+  if (searchWord.includes(':')) {
+    const parts = searchWord.split(':');
+    return findVocabWord(parts[0], words);
+  }
+
+  if (searchWord.includes('.')) {
+    const parts = searchWord.split('.');
+    return findParticipleWord(parts[0], parts.slice(1), words);
+  }
+
   const w = wordList[searchWord];
   if (w) {
     if (w.word) {

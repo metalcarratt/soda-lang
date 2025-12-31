@@ -3,7 +3,7 @@ pathName: coffee-3
 video: coffee-3.mp4
 transcript:
   - speaker: interviewer
-    lines: 커피에 크림 넣어서 드세요?
+    lines: 커피.에 크림 넣어서 드세요?
     timing: 0
 
   - speaker: interviewee
@@ -11,7 +11,7 @@ transcript:
     timing: 1
 
   - speaker: interviewee
-    lines: 저는 그냥 블랙만 마셔요.
+    lines: 저:는 그냥 블랙.만 마셔요.
     timing: 3
 
   - speaker: interviewer
@@ -19,5 +19,5 @@ transcript:
     timing: 4
 
   - speaker: interviewer
-    lines: 저는 달콤한 거 없으면 못 살아요!
+    lines: 저:는 달콤한 거 없으면 못 살아요!
     timing: 7

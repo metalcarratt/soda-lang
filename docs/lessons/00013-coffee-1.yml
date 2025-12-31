@@ -3,15 +3,15 @@ pathName: coffee-1
 video: coffee-1.mp4
 transcript:
   - speaker: interviewer
-    lines: 커피는 뜨거운 게 더 좋아요? 아니면 아이스가 더 좋아요?
+    lines: 커피.는 뜨거운 게 더 좋아요? 아니면 아이스:가 더 좋아요?
     timing: 0
 
   - speaker: interviewee
-    lines: 저는 뜨거운 게 더 좋아요.
+    lines: 저:는 뜨거운 게 더 좋아요.
     timing: 4
 
   - speaker: interviewee
-    lines: 아침에 따뜻하면 몸이 진짜 잘 풀려요.
+    lines: 아침.에 따뜻하면 몸:이 진짜 잘 풀려요.
     timing: 5
 
   - speaker: interviewer
