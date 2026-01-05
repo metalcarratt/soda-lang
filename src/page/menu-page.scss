@@ -1,0 +1,28 @@
+@use '../theme' as *;
+
+.page.menu {
+  ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+
+    li {
+      list-style-type: none;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        padding: 5px;
+        height: 100%;
+
+        &:hover {
+          background-color: $color-main-lightest;
+          color: $color-main;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

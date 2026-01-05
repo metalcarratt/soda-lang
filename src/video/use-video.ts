@@ -1,25 +1,26 @@
 import { useRef, useState } from 'react';
 import type { LessonType } from '../lesson/lessons';
 
+const videoBase = `${import.meta.env.BASE_URL}videos`;
+
 export const useVideo = (lesson?: LessonType) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [path, setPath] = useState('');
   const [subtitle, setSubtitle] = useState<string | undefined>();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [showSub, setShowSub] = useState(false);
 
   const changeVideo = (newVideo: string) => {
-    console.log('change video to ', newVideo);
-    setPath(newVideo);
-    // setIsPlaying(true);
+    const videoSrc = `${videoBase}/${newVideo}`;
+    console.log('change video to ', videoSrc);
+    setPath(videoSrc);
     const video = videoRef.current;
     if (video) {
       console.log('change src');
-      video.src = newVideo;
+      video.src = videoSrc;
       console.log('load');
       video.load();
       video.pause();
-      // console.log('play');
-      // video.play();
     }
   };
 
@@ -74,6 +75,9 @@ export const useVideo = (lesson?: LessonType) => {
     }
   };
 
+  const startShowSub = () => setShowSub(true);
+  const stopShowSub = () => setShowSub(false);
+
   return {
     videoEnded,
     newVideo,
@@ -87,6 +91,9 @@ export const useVideo = (lesson?: LessonType) => {
     play,
     handleTimeUpdate,
     subtitle,
+    showSub,
+    startShowSub,
+    stopShowSub,
   };
 };
 

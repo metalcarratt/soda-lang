@@ -1,4 +1,6 @@
 name: News report lessons
 lessons:
-  - 00005-report-soap
-  - 00006-report-birds
+  - name: Soap disaster!
+    id: 00005-report-soap
+  - name: Birds attack!
+    id: 00006-report-birds

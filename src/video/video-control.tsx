@@ -36,12 +36,22 @@ export const useVideoControls = (video: UseVideoType) => {
     return <VideoControl title="Skip" action={() => video.skipToEnd()}/>
   }
 
+  const ShowSubsButton = () => {
+    return <VideoControl title="Subs On" action={() => video.startShowSub()}/>
+  }
+
+  const StopShowSubsButton = () => {
+    return <VideoControl title="Subs Off" action={() => video.stopShowSub()}/>
+  }
+
   return {
     PlayButton,
     PauseButton,
     XNormalSpeedButton,
     X15SlowerButton,
     X20SlowerButton,
-    SkipButton
+    SkipButton,
+    ShowSubsButton,
+    StopShowSubsButton
   }
 }

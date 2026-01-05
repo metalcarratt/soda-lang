@@ -2,16 +2,13 @@ import { LessonMenu } from "../menu/lesson-menu";
 import { Panel } from "./panel";
 import { useDataContext } from "../data/use-data-context";
 import './page.scss';
-import { MenuHover } from "../menu/menu-hover";
 
 export const LessonPage = () => {
-  const { lesson, panel } = useDataContext();
-  console.log('panel', panel);
-  const showMenuHover = panel.panel && panel.panel !== 'menu';
+  const { lesson } = useDataContext();
 
   return (
     <div className="page">
-      {showMenuHover && <MenuHover><LessonMenu /></MenuHover>}
+      {<LessonMenu />}
       {lesson && <Panel />}
     </div>
   );

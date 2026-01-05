@@ -8,10 +8,12 @@
   padding-top: 20px;
   padding-left: 40px;
   padding-right: 10px;
-  background-color: $color-bg1-light;
+  // background-color: $color-bg1-light;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
 
   color: $color-bg2-dark;
 
@@ -19,8 +21,8 @@
     width: 640px;
     margin: 0 auto;
 
-    border-left: 4px solid $color-bg1-dark;
-    border-right: 4px solid $color-bg1-dark;
+    // border-left: 4px solid $color-bg1-dark;
+    // border-right: 4px solid $color-bg1-dark;
     padding-left: 40px;
     padding-right: 20px;
   }

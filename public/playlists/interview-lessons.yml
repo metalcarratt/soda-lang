@@ -1,6 +1,10 @@
 name: Interview lessons
 lessons:
-  - 00001-interview-coke
-  - 00002-interview-test
-  - 00003-interview-hair
-  - 00004-interview-late
+  - name: Do you like coke?
+    id: 00001-interview-coke
+  - name: How did you do on the test?
+    id: 00002-interview-test
+  - name: Is it a new hairstyle?
+    id: 00003-interview-hair
+  - name: Why are you late?
+    id: 00004-interview-late

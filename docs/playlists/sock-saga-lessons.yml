@@ -1,8 +1,14 @@
 name: Sock Saga lessons
 lessons:
-  - 00007-sock-saga-1
-  - 00008-sock-saga-2
-  - 00009-sock-saga-3
-  - 00010-sock-saga-4
-  - 00011-sock-saga-5
-  - 00012-sock-saga-6
+  - name: An important announcement
+    id: 00007-sock-saga-1
+  - name: Long socks
+    id: 00008-sock-saga-2
+  - name: He wore red socks
+    id: 00009-sock-saga-3
+  - name: Are stockings socks?
+    id: 00010-sock-saga-4
+  - name: A pile of socks!
+    id: 00011-sock-saga-5
+  - name: Students' victory
+    id: 00012-sock-saga-6

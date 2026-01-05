@@ -1,5 +1,8 @@
 name: Function lessons
 lessons:
-  - 00013-coffee-1
-  - 00014-coffee-2
-  - 00015-coffee-3
+  - name: Do you like your coffee hot or cold? (1)
+    id: 00013-coffee-1
+  - name: Do you like your coffee hot or cold? (1)
+    id: 00014-coffee-2
+  - name: Do you like cream on your coffee?
+    id: 00015-coffee-3

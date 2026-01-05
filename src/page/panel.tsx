@@ -6,13 +6,10 @@ import { LessonMenu } from "../menu/lesson-menu";
 
 export const Panel = () => {
   const {panel, lesson, vocab} = useDataContext();
-  console.log('load panel');
+  // console.log('load panel');
 
   if (panel.panel === 'video') {
     return <VideoPage />
-  }
-  if (panel.panel === 'video-subs') {
-    return <VideoPage showSubs={true} />
   }
   if (panel.panel === 'transcript' && lesson) {
     return <Transcript />

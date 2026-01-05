@@ -36,9 +36,16 @@ const parsePath = (path: string) => {
   } else {
     page = 'menu';
   }
+
+  const params = new URLSearchParams(window.location.search);
+  const playlist = params.get('playlist') || undefined;
+  const place = (params.get('place') as unknown as number) || undefined;
+
   return {
     page,
     lesson,
     subpage,
+    playlist,
+    place,
   };
 };
