@@ -1,20 +1,23 @@
 import { useEffect, useState } from "react";
 import { useDataContext } from "../data/use-data-context";
-import { Link } from "../page/link";
+import { Link, type TargetType } from "../page/link";
 import { loadPlaylist } from "../playlists/load-playlist";
 import './menu.scss';
 
 export const LessonMenu = () => {
-  const {lesson, pathParts} = useDataContext();
-  const [nextLink, setNextLink] = useState<string>();
-  const [prevLink, setPrevLink] = useState<string>();
+  const {lesson, pathParts, lang} = useDataContext();
+  const [nextLink, setNextLink] = useState<TargetType>();
+  const [prevLink, setPrevLink] = useState<TargetType>();
 
   const menuLink = (subpath: string, text: string) => {
-    let queryString = '';
-    if (pathParts.playlist && pathParts.place) {
-      queryString = `?playlist=${pathParts.playlist}&place=${pathParts.place}`;
+    const target = {
+      lang: lang.lang ?? '',
+      lessonId: lesson?.pathName,
+      subpage: subpath,
+      playlistId: pathParts.playlist,
+      place: pathParts.place
     }
-    return <Link to={`lesson/${lesson?.pathName}/${subpath}${queryString}`}>{text}</Link>
+    return <Link target={target}>{text}</Link>
   }
 
   useEffect(() => {
@@ -25,7 +28,13 @@ export const LessonMenu = () => {
         if (playlist.lessons.length > (Number(pathParts.place) + 1)) {
           const place = Number(pathParts.place) + 1;
           const lessonId = playlist.lessons[place].id;
-          setNextLink(`lesson/${lessonId}/${pathParts.subpage}?playlist=${playlist.id}&place=${place}`)
+          setNextLink({
+            lang: lang.lang ?? '',
+            lessonId,
+            subpage: pathParts.subpage,
+            playlistId: playlist.id,
+            place: place
+          });
         } else {
           setNextLink(undefined);
         }
@@ -33,7 +42,13 @@ export const LessonMenu = () => {
         if (pathParts.place > 0) {
           const place = Number(pathParts.place) - 1;
           const lessonId = playlist.lessons[place].id;
-          setPrevLink(`lesson/${lessonId}/${pathParts.subpage}?playlist=${playlist.id}&place=${place}`)
+          setPrevLink({
+            lang: lang.lang ?? '',
+            lessonId,
+            subpage: pathParts.subpage,
+            playlistId: playlist.id,
+            place: place
+          });
         } else {
           setPrevLink(undefined);
         }
@@ -46,12 +61,12 @@ export const LessonMenu = () => {
       <>
         {lesson && <>
           <ul className="menu">
-            <li><Link to="">[Home]</Link></li>
+            <li><Link target={{lang: lang.lang ?? ''}}>[Home]</Link></li>
             <li>{menuLink('video', 'Video')}</li>
             {lesson.transcript && <li>{menuLink('transcript', 'Dialog')}</li>}
             {lesson.vocab && <li>{menuLink('vocab', 'Vocab')}</li>}
-            {prevLink && <li><Link to={prevLink}>[Prev]</Link></li>}
-            {nextLink && <li><Link to={nextLink}>[Next]</Link></li>}
+            {prevLink && <li><Link target={prevLink}>[Prev]</Link></li>}
+            {nextLink && <li><Link target={nextLink}>[Next]</Link></li>}
           </ul>
         </>}
       </>

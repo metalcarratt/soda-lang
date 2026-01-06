@@ -1,0 +1,23 @@
+name: How have you been?
+pathName: du-greetings
+video: dutch-greetings.mp4
+transcript:
+  - speaker: First man
+    lines: hoe gaat het?
+    timing: 0
+
+  - speaker: Second man
+    lines: goed, dank je. en met jou?
+    timing: 1
+
+  - speaker: First man
+    lines: niet slecht. hoe gaat het met je werk?
+    timing: 3
+
+  - speaker: Second man
+    lines: niet zo goed, ik ben ziek geweest.
+    timing: 6
+
+  - speaker: First man
+    lines: oh, dat is vervelend.
+    timing: 8

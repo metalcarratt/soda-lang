@@ -1,25 +1,21 @@
 import './page.scss';
 import './menu-page.scss';
 import { Link } from "./link";
-import { useEffect, useState } from "react";
-import type { PlaylistLessonType, PlaylistType } from "../playlists/playlist-type";
-import { allPlaylists } from "../playlists/load-all-playlists";
+import type { PlaylistLessonType } from "../playlists/playlist-type";
+import { usePlaylists } from "../playlists/load-all-playlists";
+import { useData } from '../data/use-data';
 
 const thumbnailRoot = `${import.meta.env.BASE_URL}/lessons`;
 
 export const MenuPage = () => {
-  const [playlists, setPlaylists] = useState<PlaylistType[]>([]);
-
-  useEffect(() => {
-    (async () => {
-      setPlaylists(await allPlaylists());
-    })();
-  }, []);
+  const {playlists, loading} = usePlaylists();
 
   return (
     <div className="page menu">
       <div>
         <h1>Lessons</h1>
+        {(!playlists.length && loading) && <p>Loading...</p>}
+        {(!playlists.length && !loading) && <p>Sorry, at the moment this language doesn't currently have any lessons available. Click to <Link target={{lang: ''}}>Choose another language</Link>.</p>}
         {playlists.map(playlist => <>
           <h2>{playlist.name}</h2>
           <ol>
@@ -32,13 +28,20 @@ export const MenuPage = () => {
 }
 
 const LessonLink = ({lesson, playlistId, playlistPlace}: {lesson: PlaylistLessonType, playlistId: string, playlistPlace: number}) => {
-
-  const link = `lesson/${lesson.id}/video?playlist=${playlistId}&place=${playlistPlace}`;
+  const {lang} = useData();
+  
+  const target = {
+    lang: lang.lang ?? '',
+    lessonId: lesson.id,
+    subpage: 'video',
+    playlistId,
+    place: playlistPlace
+  }
   const thumbnailSrc = `${thumbnailRoot}/${lesson.thumbnail}`;
 
   return <li>
     { lesson &&
-      <Link to={link}>
+      <Link target={target}>
         <img src={thumbnailSrc} />
         <label>{lesson.name}</label>
       </Link>

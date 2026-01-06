@@ -1,0 +1,23 @@
+name: Another coffee?
+pathName: du-another-coffee
+video: dutch-old-ladies.mp4
+transcript:
+  - speaker: First lady
+    lines: hoeveel kopjes koffie heb jij vandaag al op?
+    timing: 0
+
+  - speaker: Second lady
+    lines: ach, maar acht hoor. wil je er nog eentje?
+    timing: 2
+
+  - speaker: First lady
+    lines: dat zou heerlijk zijn. waar zullen we heen gaan?
+    timing: 4
+
+  - speaker: Second lady
+    lines: ik heb nog wat filterkoffie binnen staan. wil je een kopje?
+    timing: 6
+
+  - speaker: First lady
+    lines: ja hoor, graag!
+    timing: 9

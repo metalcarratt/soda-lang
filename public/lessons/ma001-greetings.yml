@@ -1,0 +1,19 @@
+name: Greetings
+pathName: ma-greetings
+video: maori-greetings.mp4
+transcript:
+  - speaker: Woman
+    lines: kei te pēhea koe? i pai tō kai?
+    timing: 0
+
+  - speaker: Man
+    lines: āe, i pai. kei te hoki koe ki te kāinga?
+    timing: 2
+
+  - speaker: Woman
+    lines: āe, engari i te pō ka haere au ki te toro i ngā kaumātua.
+    timing: 4
+
+  - speaker: Woman
+    lines: kāore au e hoki mai kia whiti rā anō te rā.
+    timing: 7

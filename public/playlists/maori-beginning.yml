@@ -1,0 +1,4 @@
+name: Beginner lessons
+lessons:
+  - name: Simple greetings
+    id: ma001-greetings

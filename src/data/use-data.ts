@@ -5,14 +5,16 @@ import { useVideo } from '../video/use-video';
 import { usePath } from '../page/use-path';
 import { findLessonById } from '../lesson/lessons';
 import { useWords } from '../words/use-words';
+import { useLang } from '../language/use-lang';
 
 export const useData = () => {
+  const { path, pathParts } = usePath();
+  const lang = useLang(pathParts.lang);
+
   const lessons = useLesson();
   const video = useVideo(lessons.lesson);
   const panel = usePanel();
-  const words = useWords();
-
-  const { path, pathParts } = usePath();
+  const words = useWords(lang.lang);
 
   useEffect(() => {
     (async () => {
@@ -42,6 +44,7 @@ export const useData = () => {
     vocab: lessons.lesson?.vocab,
     panel,
     words,
+    lang,
     pathParts,
   };
 };

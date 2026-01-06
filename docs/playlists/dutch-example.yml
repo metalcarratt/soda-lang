@@ -1,0 +1,7 @@
+name: Example lessons
+lessons:
+  - name: How have you been?
+    id: du001-greetings
+
+  - name: Another coffee?
+    id: du002-another-coffee

@@ -1,5 +1,6 @@
 import yaml from 'js-yaml';
 import { useEffect, useState } from 'react';
+import { EN_DU, EN_KR, EN_MA } from '../language/languages';
 
 type BaseWordType = {
   word: string;
@@ -11,17 +12,35 @@ type MappedWordsType = Record<string, BaseWordType>;
 
 const wordsRoot = `${import.meta.env.BASE_URL}/words`;
 
-export const useWords = () => {
+export const useWords = (lang?: string) => {
   const [mappedWords, setMappedWords] = useState<MappedWordsType>({});
   const [mappedParticiples, setMappedParticiples] = useState<MappedWordsType>(
     {}
   );
 
   useEffect(() => {
+    const getVocabList = () => {
+      console.log('get vocab list', lang);
+      if (lang === EN_KR) {
+        return `${wordsRoot}/words.yml`;
+      }
+
+      if (lang === EN_DU) {
+        return `${wordsRoot}/du-words.yml`;
+      }
+
+      if (lang === EN_MA) {
+        return `${wordsRoot}/ma-words.yml`;
+      }
+
+      return '';
+    };
+
     (async () => {
-      const res = await fetch(`${wordsRoot}/words.yml`);
+      const res = await fetch(getVocabList());
       const text = await res.text();
       const words = yaml.load(text) as BaseWordType[];
+      console.log('words', words);
 
       const tempMappedWords: MappedWordsType = {};
       for (const word of words) {
@@ -39,7 +58,7 @@ export const useWords = () => {
       }
       setMappedParticiples(tempMappedParticiples);
     })();
-  }, []);
+  }, [lang]);
 
   const findWord = (searchWord: string) => {
     return mappedWords[searchWord];
