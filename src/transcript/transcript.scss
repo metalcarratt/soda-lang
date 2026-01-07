@@ -7,7 +7,7 @@
 
   .transcript {
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: max-content 1fr 1fr;
     gap: 1rem;
 
     font-size: 18px;
@@ -53,6 +53,16 @@
       ul {
         margin: 0;
         padding-left: 20px;
+      }
+    }
+
+    &.tn {
+      font-size: 14px;
+      color: $color-bg2;
+
+      .tooltip {
+        left: 0;
+        transform: translateY(-100%);
       }
     }
   }

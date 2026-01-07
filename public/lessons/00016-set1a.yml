@@ -1,0 +1,28 @@
+name: How was you commute?
+pathName: set1a
+video: set1a.mp4
+transcript:
+  - speaker: interviewer
+    lines: 오늘 출근.길 어땠어요?
+    tn: How was your commute today?
+    timing: 0
+
+  - speaker: interviewee
+    lines: 사람.이 너무 많아서
+    tn: So many people
+    timing: 2
+
+  - speaker: interviewee
+    lines: 정신.이 하나도 없었어요.
+    tn: I was out of my mind.
+    timing: 4
+
+  - speaker: interviewer
+    lines: 그래도 시간.은 맞았어요?
+    tn: so did you make it in time?
+    timing: 6
+
+  - speaker: interviewee
+    lines: 네, 겨우 맞췄어요.
+    tn: yes, I just made it.
+    timing: 7

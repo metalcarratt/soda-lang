@@ -1,0 +1,23 @@
+name: What kind of coffee do you like?
+pathName: set1b
+video: set1b.mp4
+transcript:
+  - speaker: interviewer
+    lines: 어떤 커피 좋아하:세요?
+    tn: What kind of coffee do you like?
+    timing: 0
+
+  - speaker: interviewee
+    lines: 요즘.은 진짜 진한 맛.이 마음.에 들어:요.
+    tn: These days I really like strong flavours.
+    timing: 2
+
+  - speaker: interviewee
+    lines: 왜 그게 좋아:요?
+    tn: Why do you like that?
+    timing: 5
+
+  - speaker: interviewer
+    lines: 기분.이 확 살아나.거든요.
+    tn: It instantly revives me.
+    timing: 7

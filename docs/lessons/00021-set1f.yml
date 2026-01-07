@@ -1,0 +1,28 @@
+name: What are you into these days?
+pathName: set1f
+video: set1f.mp4
+transcript:
+  - speaker: interviewer
+    lines: 요즘 뭐에 관심 있어요?
+    tn: What are you into these days?
+    timing: 0
+
+  - speaker: interviewee
+    lines: 사진 찍는 거요.
+    tn: taking photos.
+    timing: 1
+
+  - speaker: interviewee
+    lines: 분위기 있는 장면 찾는 게 재밌어요.
+    tn: It's fun to find scenes with a nice mood.
+    timing: 2
+
+  - speaker: interviewer
+    lines: 어떤 느낌 좋아해요?
+    tn: What feeling do you like?
+    timing: 5
+
+  - speaker: interviewee
+    lines: 차분한 느낌 이요.
+    tn: A calm feeling.
+    timing: 7

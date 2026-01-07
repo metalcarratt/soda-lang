@@ -4,7 +4,12 @@ export type LessonType = {
   name: string;
   pathName: string;
   video: string;
-  transcript?: { speaker: string; lines: string; timing?: number }[];
+  transcript?: {
+    speaker: string;
+    lines: string;
+    timing?: number;
+    tn?: string;
+  }[];
   vocab?: string[];
 };
 

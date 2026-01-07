@@ -15,10 +15,12 @@
 - word: 좋아하다
   meaning: like
   image: like.jpg
+  alts: [좋아, 좋아하, 좋아해요]
 
 - word: 마시다
   meaning: drink
   image: drinking.jpg
+  alts: [마시]
 
 - word: 이번
   meaning: this time
@@ -30,6 +32,7 @@
 
 - word: 어떻다
   meaning: how?
+  alts: [어땠어요]
   image: how.jpg
 
 - word: 어렵다
@@ -54,6 +57,7 @@
 
 - word: 가다
   meaning: go
+  alts: [갈]
   image: go.jpg
 
 - word: 자다
@@ -182,6 +186,10 @@
 - word: 많이
   meaning: many
 
+- word: 많다
+  meaning: many
+  alts: [많아서, 많아요]
+
 - word: 으엑
   meaning: eww
 
@@ -196,6 +204,7 @@
 
 - word: 것
   meaning: thing
+  alts: [거요, 게]
 
 - word: 더
   meaning: more
@@ -274,6 +283,203 @@
 
 - word: 없다
   meaning: not have
+  alts: [없었어요]
 
 - word: 살다
   meaning: live
+
+- word: 사람
+  meaning: person
+
+- word: 정신
+  meaning: mind
+
+- word: 출근
+  meaning: going to work
+
+- word: 하나도
+  meaning: not even one
+
+- word: 그래도
+  meaning: nevertheless
+
+- word: 맞다
+  meaning: correct
+  alts: [맞았어요, 맞췄어요]
+
+- word: 겨우
+  meaning: barely
+
+- word: 네
+  meaning: yes
+
+- word: 진한
+  meaning: deep / dark / intense / thick
+
+- word: 맛
+  meaning: taste
+
+- word: 마음
+  meaning: heart
+
+- word: 들다
+  meaning: hold / cost / take / enter / join / contain
+  alts: [들어]
+
+- word: 확
+  meaning: sudden / strong / bold
+
+- word: 살아나다
+  meaning: revive / come back to life / recover
+  alts: [살아나]
+
+- word: 어떤
+  meaning: what kind / some
+
+- word: 꼭
+  meaning: definitely
+
+- word: 습관
+  meaning: habit / routine
+
+- word: 있다
+  meaning: have
+
+- word: 하는
+  meaning: doing
+
+- word: 일단
+  meaning: first thing
+
+- word: 물
+  meaning: water
+
+- word: 잔
+  meaning: cup
+
+- word: 정리하다
+  meaning: tidy / organise / arrange
+  alts: [정리해]
+
+- word: 도움
+  meaning: help
+
+- word: 되다
+  meaning: become / work
+  alts: [돼]
+
+- word: 편하다
+  meaning: comfortable
+  alts: [편해]
+
+- word: 스트레스
+  meaning: stress
+
+- word: 자꾸
+  meaning: repeatedly
+
+- word: 밀리다
+  meaning: be pushed / accumulate / be carried along
+  alts: [밀려]
+
+- word: 골치
+  meaning: skull / headache
+
+- word: 아프다
+  meaning: hurts
+  alts: [아파요]
+
+- word: 풀다
+  meaning: loosen / untie / release
+  alts: [풀어요]
+
+- word: 산책하다
+  meaning: take a walk
+  alts: [산책하]
+
+- word: 좀
+  meaning: a little
+
+- word: 가라앉다
+  meaning: sink / subside / calm down
+  alts: [가라앉혀요]
+
+- word: 뭐
+  meaning: what
+  alts: [뭐에]
+
+- word: 하다
+  meaning: do
+  alts: [할]
+
+- word: 계획
+  meaning: plan
+
+- word: 이다
+  meaning: is
+  alts: [이에요, 이요]
+
+- word: 친구
+  meaning: friend
+
+- word: 만나다
+  meaning: meet
+  alts: [만나]
+
+- word: 점심
+  meaning: lunch
+
+- word: 먹다
+  meaning: eat
+  alts: [먹]
+
+- word: 분위기
+  meaning: atmosphere / mood
+
+- word: 좋은
+  meaning: good
+
+- word: 카페
+  meaning: café
+
+- word: 것이다
+  meaning: will do
+  alts: [거예요]
+
+- word: 기대하다
+  meaning: look forward to
+  alts: [기대되겠네요]
+
+- word: 오랜만
+  meaning: a long time
+
+- word: 관심
+  meaning: interest / hobby / care
+
+- word: 사진
+  meaning: picture
+
+- word: 찍다
+  meaning: take / record / stamp / dip / choose
+  alts: [찍는]
+
+- word: 있는
+  meaning: having
+
+- word: 장면
+  meaning: scene
+
+- word: 찾다
+  meaning: find
+  alts: [찾는]
+
+- word: 재미있다
+  meaning: fun / interesting
+  alts: [재밌어요]
+
+- word: 느낌
+  meaning: feeling
+
+- word: 차분하다
+  meaning: calm
+  alts: [차분한]

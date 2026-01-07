@@ -1,0 +1,28 @@
+name: Do you have any morning habits?
+pathName: set1e
+video: set1e.mp4
+transcript:
+  - speaker: interviewer
+    lines: 오늘 뭐 할 계획 이에요?
+    tn: Do you have any plans for today?
+    timing: 1
+
+  - speaker: interviewee
+    lines: 일단 친구 만나.서 점심 먹.고,
+    tn: First I will go out for lunch with a friend and,
+    timing: 3
+
+  - speaker: interviewee
+    lines: 분위기 좋은 카페 갈 거예요.
+    tn: go to a cafe with a good atmosphere.
+    timing: 5
+
+  - speaker: interviewer
+    lines: 기대되겠네요.
+    tn: sounds like something to look forward to.
+    timing: 7
+
+  - speaker: interviewee
+    lines: 네, 오랜만.이라서요.
+    tn: yes, since it's been a long time.
+    timing: 8.5

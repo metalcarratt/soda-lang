@@ -1,0 +1,28 @@
+name: Are you stressed these days?
+pathName: set1d
+video: set1d.mp4
+transcript:
+  - speaker: interviewer
+    lines: 요즘 스트레스 많아요?
+    tn: Do you have much stress these days?
+    timing: 0
+
+  - speaker: interviewee
+    lines: 네, 일이 자꾸 밀려.서 골치 아파요.
+    tn: Yes, because many things pile up, I get a headache.
+    timing: 2
+
+  - speaker: interviewer
+    lines: 어떻게 풀어요?
+    tn: How do you find release?
+    timing: 4.5
+
+  - speaker: interviewee
+    lines: 그냥 산책하.면서
+    tn: Just while taking a walk
+    timing: 6
+
+  - speaker: interviewee
+    lines: 마음.을 좀 가라앉혀요.
+    tn: My heart calms down a little
+    timing: 7.5

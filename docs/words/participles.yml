@@ -33,3 +33,23 @@
 
 - word: 만
   meaning: only
+
+- word: 길
+  meaining: path / way
+
+- word: 고
+  meaning: and
+
+- word: 거든
+  meaning: because
+  alts: [거든요]
+
+- word: 서
+  meaning: because
+
+- word: 면서
+  meaning: while
+
+- word: 이라서
+  meaning: because
+  alts: [이라서요]

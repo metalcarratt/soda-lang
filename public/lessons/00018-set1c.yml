@@ -1,0 +1,24 @@
+name: What are your plans for today?
+pathName: set1c
+video: set1c.mp4
+transcript:
+  - speaker: interviewer
+    lines: 아침.에 꼭 하는 습관 있어요?
+    tn: Do you have any morning routines?
+    timing: 0
+
+  - speaker: interviewee
+    lines: 일단 물 한 잔 마시.고,
+    timing: 2
+
+  - speaker: interviewee
+    lines: 기분 정리해:요.
+    timing: 5
+
+  - speaker: interviewee
+    lines: 그게 도움.이 돼:요?
+    timing: 6
+
+  - speaker: interviewer
+    lines: 네, 마음.이 편해:져요.
+    timing: 8

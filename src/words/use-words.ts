@@ -5,7 +5,8 @@ import { EN_DU, EN_KR, EN_MA } from '../language/languages';
 type BaseWordType = {
   word: string;
   meaning: string;
-  image: string;
+  alts?: string[];
+  image?: string;
 };
 
 type MappedWordsType = Record<string, BaseWordType>;
@@ -45,6 +46,10 @@ export const useWords = (lang?: string) => {
       const tempMappedWords: MappedWordsType = {};
       for (const word of words) {
         tempMappedWords[word.word] = word;
+        if (word.alts)
+          for (const alt of word.alts) {
+            tempMappedWords[alt] = word;
+          }
       }
       setMappedWords(tempMappedWords);
 
@@ -55,16 +60,22 @@ export const useWords = (lang?: string) => {
       const tempMappedParticiples: MappedWordsType = {};
       for (const participle of participles) {
         tempMappedParticiples[participle.word] = participle;
+        if (participle.alts)
+          for (const alt of participle.alts) {
+            tempMappedParticiples[alt] = participle;
+          }
       }
       setMappedParticiples(tempMappedParticiples);
     })();
   }, [lang]);
 
   const findWord = (searchWord: string) => {
+    // console.log('finding word', searchWord);
     return mappedWords[searchWord];
   };
 
   const findParticiple = (searchParticiple: string) => {
+    // console.log('finding participle', searchParticiple);
     return mappedParticiples[searchParticiple];
   };
 

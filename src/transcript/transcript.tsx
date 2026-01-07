@@ -12,7 +12,16 @@ export const Transcript = () => {
       <h1>Transcript</h1>
       <p>Hover over or touch words to reveal their English meaning. Try to understand the meaning of the sentence.</p>
       <div className="transcript">
-      {lesson?.transcript?.map(line => <><span className="speaker">{line.speaker}</span><TranscriptLine line={line.lines} /></>)}
+      {lesson?.transcript?.map(line => 
+        <>
+          <span className="speaker">{line.speaker}</span>
+          <TranscriptLine line={line.lines} />
+          {line.tn ? <span className="transcriptWord tn">
+            [Translation]
+            <span className="tooltip">{line.tn}</span>
+          </span> : <span></span>}
+        </>
+      )}
       </div>
     </div>
   );

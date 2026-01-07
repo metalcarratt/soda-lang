@@ -227,7 +227,7 @@ export const wordList: Record<string, WordType> = {
   아무도: { en: 'no one' },
   자백하지: { en: 'confess', note: "~하지 않다 together means 'do not'" },
   않고: { en: 'did not' },
-  있어요: { en: 'doing', note: "~고 있다 together means 'doing'" },
+  있어요: { word: '있다' },
   과연: { en: 'indeed' },
   다음엔: { en: 'next' },
   무슨: { en: 'what kind of' },
@@ -256,7 +256,6 @@ export const wordList: Record<string, WordType> = {
   },
   물건을: { en: 'things' },
   훔쳐가고: { en: 'steal' },
-  어떤: { en: 'some' },
   여자: { en: 'woman/girl' },
   학생은: { en: 'student' },
   갈매기한테: {
@@ -372,7 +371,6 @@ export const wordList: Record<string, WordType> = {
   환호하고: { en: 'cheer' },
 
   뜨거운: { word: '뜨거다' },
-  게: { word: '것' },
   좋아요: { word: '좋아하다' },
   따뜻하면: { word: '따뜻하다', participles: ['면'] },
   풀려요: { word: '풀리다' },
