@@ -72,6 +72,41 @@
   meaning: am sick
   image: sick.jpg
 
+- word: 너무
+  meaning: too
+
+- word: 많이
+  meaning: many
+
+- word: 많다
+  meaning: many
+  alts: [많아서, 많아요]
+
+- word: 않다
+  meaning: not do
+
+- word: 커피
+  meaning: coffee
+
+- word: 것
+  meaning: thing
+  alts: [거요, 게]
+
+- word: 더
+  meaning: more
+
+- word: 저
+  meaning: I
+
+- word: 아침
+  meaning: morning
+
+- word: 잘
+  meaning: well
+
+- word: 그렇죠
+  meaning: that's right
+
   # common in speech
 
 - word: 진짜
@@ -117,6 +152,27 @@
 - word: 스타일
   meaning: style
   image: style.jpg
+
+- word: 뜨거다
+  meaning: hot
+
+- word: 아니면
+  meaning: otherwise
+
+- word: 아이스
+  meaning: iced drink
+
+- word: 따뜻하다
+  meaning: is hot
+
+- word: 몸
+  meaning: body
+
+- word: 풀리다
+  meaning: relax
+
+- word: 춥다
+  meaning: is cold
 
 # moderate frequency (school related)
 
@@ -178,66 +234,10 @@
   meaning: movie
   image: movie.jpg
 
-# other words
-
-- word: 너무
-  meaning: too
-
-- word: 많이
-  meaning: many
-
-- word: 많다
-  meaning: many
-  alts: [많아서, 많아요]
-
 - word: 으엑
   meaning: eww
 
-- word: 않다
-  meaning: not do
-
-- word: 커피
-  meaning: coffee
-
-- word: 뜨거다
-  meaning: hot
-
-- word: 것
-  meaning: thing
-  alts: [거요, 게]
-
-- word: 더
-  meaning: more
-
-- word: 아니면
-  meaning: otherwise
-
-- word: 아이스
-  meaning: iced drink
-
-- word: 저
-  meaning: I
-
-- word: 아침
-  meaning: morning
-
-- word: 따뜻하다
-  meaning: is hot
-
-- word: 몸
-  meaning: body
-
-- word: 잘
-  meaning: well
-
-- word: 풀리다
-  meaning: relax
-
-- word: 그렇죠
-  meaning: that's right
-
-- word: 춥다
-  meaning: is cold
+# other words
 
 - word: 시원하다
   meaning: is cool

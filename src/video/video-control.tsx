@@ -20,22 +20,6 @@ export const useVideoControls = (video: UseVideoType) => {
     return <VideoControl title="⏸︎" action={() => video.pause()}/>
   }
 
-  const XNormalSpeedButton = () => {
-    return <VideoControl title="x1.0" action={() => video.setSpeed(1)}/>
-  }
-
-  const X15SlowerButton = () => {
-    return <VideoControl title="x1.5" action={() => video.setSpeed(0.666)}/>
-  }
-
-  const X20SlowerButton = () => {
-    return <VideoControl title="x2.0" action={() => video.setSpeed(0.5)}/>
-  }
-
-  const SkipButton = () => {
-    return <VideoControl title="Skip" action={() => video.skipToEnd()}/>
-  }
-
   const ShowSubsButton = () => {
     return <VideoControl title="Subs On" action={() => video.startShowSub()}/>
   }
@@ -47,10 +31,6 @@ export const useVideoControls = (video: UseVideoType) => {
   return {
     PlayButton,
     PauseButton,
-    XNormalSpeedButton,
-    X15SlowerButton,
-    X20SlowerButton,
-    SkipButton,
     ShowSubsButton,
     StopShowSubsButton
   }

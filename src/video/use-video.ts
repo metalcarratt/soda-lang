@@ -9,16 +9,17 @@ export const useVideo = (lesson?: LessonType) => {
   const [subtitle, setSubtitle] = useState<string | undefined>();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showSub, setShowSub] = useState(false);
+  const [speed, updateSpeed] = useState(() => {
+    const stored = localStorage.getItem('videoSpeed');
+    return stored !== null ? Number(JSON.parse(stored)) : 1;
+  });
 
   const changeVideo = (newVideo: string) => {
     const videoSrc = `${videoBase}/${newVideo}`;
-    console.log('change video to ', videoSrc);
     setPath(videoSrc);
     const video = videoRef.current;
     if (video) {
-      console.log('change src');
       video.src = videoSrc;
-      console.log('load');
       video.load();
       video.pause();
     }
@@ -56,6 +57,8 @@ export const useVideo = (lesson?: LessonType) => {
   };
 
   const setSpeed = (speed: number) => {
+    updateSpeed(speed);
+    localStorage.setItem('videoSpeed', JSON.stringify(speed));
     if (videoRef.current) {
       videoRef.current.playbackRate = speed;
     }
@@ -70,6 +73,7 @@ export const useVideo = (lesson?: LessonType) => {
 
   const play = () => {
     if (videoRef.current) {
+      videoRef.current.playbackRate = speed;
       videoRef.current.play();
       setIsPlaying(true);
     }
@@ -87,6 +91,7 @@ export const useVideo = (lesson?: LessonType) => {
     videoRef,
     setPath,
     setSpeed,
+    speed,
     pause,
     play,
     handleTimeUpdate,
