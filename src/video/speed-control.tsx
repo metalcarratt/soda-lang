@@ -19,17 +19,22 @@ export const SpeedControl = () => {
         className={`topRight ${video.speed === 0.666 ? 'selected' : ''}`}
         onClick={() => video.setSpeed(0.666)}
       >
-        ×¾
+        ⅔
       </span>
       
       <span 
-        className={`bottomLeft ${video.speed === 0.5 ? 'selected' : ''}`}
-        onClick={() => video.setSpeed(0.5)}
+        className={`bottomLeft ${video.speed === 1.5 ? 'selected' : ''}`}
+        onClick={() => video.setSpeed(1.5)}
       >
-        ×½
+        1½
       </span>
       
-      <span className="bottomRight void"></span>
+      <span
+        className={`bottomRight ${video.speed === 0.5 ? 'selected' : ''}`}
+        onClick={() => video.setSpeed(0.5)}
+      >
+        ½
+      </span>
     </div>
     </div>
   );

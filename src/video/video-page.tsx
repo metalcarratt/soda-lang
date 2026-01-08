@@ -4,10 +4,11 @@ import { VideoPanel } from "./video-panel";
 import { useDataContext } from "../data/use-data-context";
 import './video.scss';
 import { SpeedControl } from "./speed-control";
+import { SubsControl } from "./subs-control";
 
 export const VideoPage = () => {
   const { video } = useDataContext();
-  const { PlayButton, PauseButton, ShowSubsButton, StopShowSubsButton } = useVideoControls(video);
+  const { PlayButton, PauseButton, StopButton } = useVideoControls(video);
     
   const [overlayWidth, setOverlayWidth] = useState('100%');
   
@@ -29,14 +30,17 @@ export const VideoPage = () => {
     <>
       <VideoPanel video={video} />
       <div className="overlay" style={{width: overlayWidth}}>
-        { video.showSub && video.subtitle && <p>{video.subtitle}</p>}
+        { video.showSub && video.subtitle && <p className="subs">{video.subtitle}</p>}
         <div className="actions">
           { !video.isPlaying
             ? <PlayButton />
-            : <PauseButton />
+            : <>
+                <PauseButton />
+                <StopButton />
+              </>
           }
           <SpeedControl />
-          { video.showSub ? <StopShowSubsButton /> : <ShowSubsButton />}
+          <SubsControl />
         </div>
       </div>
     </>

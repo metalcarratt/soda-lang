@@ -8,7 +8,10 @@ export const useVideo = (lesson?: LessonType) => {
   const [path, setPath] = useState('');
   const [subtitle, setSubtitle] = useState<string | undefined>();
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [showSub, setShowSub] = useState(false);
+  const [showSub, setShowSub] = useState(() => {
+    const stored = localStorage.getItem('showSub');
+    return stored !== null ? Boolean(JSON.parse(stored)) : false;
+  });
   const [speed, updateSpeed] = useState(() => {
     const stored = localStorage.getItem('videoSpeed');
     return stored !== null ? Number(JSON.parse(stored)) : 1;
@@ -71,6 +74,14 @@ export const useVideo = (lesson?: LessonType) => {
     }
   };
 
+  const stop = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+      setIsPlaying(false);
+    }
+  };
+
   const play = () => {
     if (videoRef.current) {
       videoRef.current.playbackRate = speed;
@@ -79,8 +90,14 @@ export const useVideo = (lesson?: LessonType) => {
     }
   };
 
-  const startShowSub = () => setShowSub(true);
-  const stopShowSub = () => setShowSub(false);
+  const startShowSub = () => {
+    localStorage.setItem('showSub', JSON.stringify(true));
+    setShowSub(true);
+  };
+  const stopShowSub = () => {
+    localStorage.setItem('showSub', JSON.stringify(false));
+    setShowSub(false);
+  };
 
   return {
     videoEnded,
@@ -94,6 +111,7 @@ export const useVideo = (lesson?: LessonType) => {
     speed,
     pause,
     play,
+    stop,
     handleTimeUpdate,
     subtitle,
     showSub,

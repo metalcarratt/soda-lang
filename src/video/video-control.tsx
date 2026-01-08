@@ -1,37 +1,21 @@
 import type { UseVideoType } from "./use-video";
 
-type VideoControlType = {
-  title: string,
-  action: () => void
-}
-
-export const VideoControl = ({title, action}: VideoControlType) => {
-  return (
-    <button onClick={action}>{title}</button>
-  );
-}
-
 export const useVideoControls = (video: UseVideoType) => {
   const PlayButton = () => {
-    return <VideoControl title="▶" action={() => video.play()}/>
+    return <button onClick={() => video.play()}>▶</button>
   }
 
   const PauseButton = () => {
-    return <VideoControl title="⏸︎" action={() => video.pause()}/>
+    return <button onClick={() => video.pause()}>⏸︎</button>
   }
 
-  const ShowSubsButton = () => {
-    return <VideoControl title="Subs On" action={() => video.startShowSub()}/>
-  }
-
-  const StopShowSubsButton = () => {
-    return <VideoControl title="Subs Off" action={() => video.stopShowSub()}/>
+  const StopButton = () => {
+    return <button onClick={() => video.stop()}>⏹</button>
   }
 
   return {
     PlayButton,
     PauseButton,
-    ShowSubsButton,
-    StopShowSubsButton
+    StopButton
   }
 }

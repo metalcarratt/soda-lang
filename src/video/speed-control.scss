@@ -19,7 +19,7 @@
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     grid-template-rows: repeat(2, 1fr); /* 2 rows */
     background-color: $color-soft;
-    padding: 4px;
+    padding: 2px;
     border-radius: 60px;
 
     span {
@@ -29,6 +29,7 @@
       display: inline-flex;
       box-sizing: border-box;
       color: $color-bg1-darkest;
+      border: 1px solid $color-soft-darkest;
 
       &:hover:not(.void):not(.selected) {
         background-color: $color-bg1-light;
@@ -37,6 +38,7 @@
 
       &.selected {
         background-color: $color-bg1-light;
+        border: 1px solid $color-soft-black;
       }
     }
 
@@ -46,8 +48,6 @@
       align-items: flex-end;
       padding-bottom: 5px;
       padding-right: 5px;
-      border-bottom: 1px solid $color-bg1-darkest;
-      border-right: 1px solid $color-bg1-darkest;
     }
 
     .topRight {
@@ -55,26 +55,25 @@
       justify-content: flex-start;
       align-items: flex-end;
       padding-bottom: 5px;
-      padding-left: 2px;
-      border-bottom: 1px solid $color-bg1-darkest;
-      border-left: 1px solid $color-bg1-darkest;
+      padding-left: 8px;
     }
 
     .bottomLeft {
       border-bottom-left-radius: 50px;
       justify-content: flex-end;
       align-items: flex-start;
-      padding-right: 2px;
-      border-top: 1px solid $color-bg1-darkest;
-      border-right: 1px solid $color-bg1-darkest;
+      padding-top: 2px;
+      padding-right: 5px;
+      border-right: 1px solid black;
     }
 
     .bottomRight {
       border-bottom-right-radius: 50px;
       justify-content: flex-start;
       align-items: flex-start;
-      border-top: 1px solid $color-bg1-darkest;
-      border-left: 1px solid $color-bg1-darkest;
+      padding-top: 2px;
+      padding-left: 8px;
+      border-left: 1px solid black;
     }
 
     .void {
