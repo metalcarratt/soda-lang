@@ -1,6 +1,6 @@
 import yaml from 'js-yaml';
 import { useEffect, useState } from 'react';
-import { EN_DU, EN_KR, EN_MA } from '../language/languages';
+import { EN_DU, EN_KR, EN_MA, EN_ZH } from '../language/languages';
 
 type BaseWordType = {
   word: string;
@@ -34,6 +34,22 @@ export const useWords = (lang?: string) => {
         return `${wordsRoot}/ma-words.yml`;
       }
 
+      if (lang === EN_ZH) {
+        return `${wordsRoot}/zh-words.yml`;
+      }
+
+      return '';
+    };
+
+    const getParticipleList = () => {
+      if (lang === EN_KR) {
+        return `${wordsRoot}/participles.yml`;
+      }
+
+      if (lang === EN_ZH) {
+        return `${wordsRoot}/zh-words.yml`;
+      }
+
       return '';
     };
 
@@ -53,7 +69,7 @@ export const useWords = (lang?: string) => {
       }
       setMappedWords(tempMappedWords);
 
-      const res2 = await fetch(`${wordsRoot}/participles.yml`);
+      const res2 = await fetch(getParticipleList());
       const text2 = await res2.text();
       const participles = yaml.load(text2) as BaseWordType[];
 

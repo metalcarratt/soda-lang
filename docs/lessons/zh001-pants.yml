@@ -1,0 +1,19 @@
+name: Empty your pants
+pathName: zh-pants
+video: zh-pants.mp4
+transcript:
+  - speaker: Wife
+    lines: 你.把 裤子 放 去 洗 一下 吧，脏了。
+    timing: 0
+
+  - speaker: Husband
+    lines: 好，我.把 它 放.进 洗衣篮。
+    timing: 2
+
+  - speaker: Wife
+    lines: 好的，记得 先.把 口袋 清空 哦。
+    timing: 5
+
+  - speaker: Husband
+    lines: 啊 对，对不起，这次 我 一定 先.把 口袋 清干净。
+    timing: 6
