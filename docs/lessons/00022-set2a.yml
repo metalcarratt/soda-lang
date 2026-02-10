@@ -1,0 +1,28 @@
+name: Pigeon Bench
+pathName: set2a
+video: set2a-pigeons.mp4
+transcript:
+  - speaker: interviewer
+    lines: 여기서 사람들이 잘 못 보는 게 뭐예요?
+    tn: What's something people overlook around here?
+    timing: 0
+
+  - speaker: runner
+    lines: 저기 벤치요.
+    tn: That bench over there.
+    timing: 1
+
+  - speaker: runner
+    lines: 항상 비어 있는데... 이유가 있어요.
+    tn: It's always empty... for a reason.
+    timing: 1
+
+  - speaker: interviewee
+    lines: 왜요?
+    tn: Why?
+    timing: 2
+
+  - speaker: interviewer
+    lines: 앉으면 바로 비둘기가 심사 들어와요.
+    tn: Sit down and the pigeons start judging you.
+    timing: 5
