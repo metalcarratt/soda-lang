@@ -20,17 +20,29 @@ export function usePath() {
     }
   };
 
-  const pathParts = parsePath(path);
+  const pathParts = parsePath(path, navigate);
 
   return { path, pathParts, navigate };
 }
 
-const parsePath = (path: string) => {
+const parsePath = (path: string, navigate: (path: string) => void) => {
+  const params = new URLSearchParams(window.location.search);
+
+  // If redirected from 404.html, use the real path
+  const redirect = params.get('redirect');
+  if (redirect) {
+    navigate(redirect);
+    // return;
+    throw new Error('Redirecting'); // return type becomes `never`
+  }
+
   const segments = path.split('/').filter(Boolean);
+
   let lang = segments[1];
   let page = segments[2];
   let lesson;
   let subpage;
+
   if (page === 'lesson') {
     lesson = segments[3];
     subpage = segments[4];
@@ -38,7 +50,6 @@ const parsePath = (path: string) => {
     page = 'menu';
   }
 
-  const params = new URLSearchParams(window.location.search);
   const playlist = params.get('playlist') || undefined;
   const place = (params.get('place') as unknown as number) || undefined;
 

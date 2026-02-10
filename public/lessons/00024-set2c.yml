@@ -1,0 +1,28 @@
+name: A quiet place
+pathName: set2c
+video: set2c-snacks.mp4
+transcript:
+  - speaker: woman
+    lines: 조용히 있고 싶을 때 어디로 가요?
+    tn: Where do you go when you need a quiet moment?
+    timing: 0
+
+  - speaker: boy
+    lines: 편의점요.
+    tn: The convenience store.
+    timing: 1
+
+  - speaker: boy
+    lines: 다들 자기 세상에 빠져 있어서 아무도 신경 안 써요.
+    tn: Everyone's in their own world, nobody cares.
+    timing: 1
+
+  - speaker: woman
+    lines: 그건 맞네요.
+    tn: That's true.
+    timing: 1
+
+  - speaker: boy
+    lines: 네, 거기선 과자도 조용히 먹어야 해요.
+    tn: Yeah, even snacks feel quieter there.
+    timing: 2

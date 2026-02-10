@@ -1,0 +1,28 @@
+name: Awkard waiting place
+pathName: set2b
+video: set2b-waiting.mp4
+transcript:
+  - speaker: interviewer
+    lines: 누구 기다릴 때 보통 어디에 서 있어요?
+    tn: Where do you usually stand when waiting for someone?
+    timing: 0
+
+  - speaker: student
+    lines: 저는 저기 가게 앞이요.
+    tn: In front of that shop.
+    timing: 1
+
+  - speaker: student
+    lines: 사장님이 항상 '또 왔네?'라고 해요.
+    tn: The owner always says, 'You again?'
+    timing: 1
+
+  - speaker: interviewer
+    lines: 민망하지 않아요?
+    tn: Isn't that awkward?
+    timing: 1
+
+  - speaker: student
+    lines: 이제는 그냥 인사해요.
+    tn: At this point, I just greet him.
+    timing: 2
