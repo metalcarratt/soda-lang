@@ -63,11 +63,13 @@ const TranscriptLine = ({line}: {line: string}) => {
 const Word = ({ word }: {word: string}) => {
   const { words } = useData();
   const w = findWord(word, words);
+  const rom = w?.rom;
   const displayWord = word.length > 1 ? word.replaceAll('.', '').replaceAll(':', '') : word;
   return <span className="transcriptWord">
+    {rom && <span className="furigana">{rom}</span>}
     {displayWord}
     <span className="tooltip">
-      {w?.en ?? 'Unknown'}
+      {w?.en ?? 'Unknown'} {rom && `(${rom})`}
       {w?.breakdown && <ul>
         {w.breakdown.map(item => <li>{item[0]} - {item[1]}</li>)}
         </ul>}
@@ -106,7 +108,8 @@ const findVocabWord = (searchWord: string, words: UseWordsType): WordType | unde
   
   if (v) {
     return {
-      en: v.meaning
+      en: v.meaning,
+      rom: v.rom
     };
   }
   return undefined;
@@ -114,6 +117,7 @@ const findVocabWord = (searchWord: string, words: UseWordsType): WordType | unde
 
 const findParticipleWord = (searchWord: string, searchParticiples: string[], words: UseWordsType): WordType | undefined => {
   let en = '';
+  let rom;
   const breakdown: [string, string][] = [];
   
   const v = words.findWord(searchWord);
@@ -121,10 +125,14 @@ const findParticipleWord = (searchWord: string, searchParticiples: string[], wor
   if (v) {
     breakdown.push([v.word, v.meaning]);
     en = v.meaning;
+    rom = v.rom;
 
     for (const participle of searchParticiples) {
       const p = words.findParticiple(participle);
       if (p) {
+        if (p.rom) {
+          rom += ' ' + p.rom;
+        }
         breakdown.push([p.word, p.meaning]);
       }
     }
@@ -133,6 +141,7 @@ const findParticipleWord = (searchWord: string, searchParticiples: string[], wor
 
   return {
       en,
-      breakdown
+      breakdown,
+      rom
     };
 }

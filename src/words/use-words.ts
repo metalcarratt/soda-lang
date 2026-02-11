@@ -7,6 +7,7 @@ type BaseWordType = {
   meaning: string;
   alts?: string[];
   image?: string;
+  rom?: string;
 };
 
 type MappedWordsType = Record<string, BaseWordType>;

@@ -15,14 +15,23 @@
 
   .transcriptWord {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     color: $color-bg1;
-    // margin: 0 4px;
+    flex-direction: column;
+
+    .furigana {
+      font-size: 14px;
+      color: $color-bg1-dark;
+    }
 
     &:hover {
       color: $color-bg1-dark;
       cursor: pointer;
       font-size: 20px;
+
+      .furigana {
+        font-size: 16px;
+      }
 
       .tooltip {
         opacity: 1;

@@ -4,6 +4,7 @@ export type WordType = {
   participles?: string[];
   breakdown?: [string, string][];
   note?: string;
+  rom?: string;
 };
 
 export const wordList: Record<string, WordType> = {
